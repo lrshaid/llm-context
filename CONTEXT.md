@@ -40,6 +40,15 @@ Analytics Engineer at Mejuri (retail startup) — dbt + BigQuery, Looker, Shopif
 - Interested in AI/LLM tooling and automation beyond traditional analytics
 \n---\n
 \n## Rules & Feedback\n
+
+At the start of every new conversation, before doing anything else:
+1. Run `cd /Users/lautaro.rshaid/llm-context && git pull origin main`
+2. Read `/Users/lautaro.rshaid/llm-context/CONTEXT.md`
+3. Use that context throughout the session
+
+**Why:** Lautaro wants full persistent context available in every session regardless of working directory or topic.
+**How to apply:** Always. Do it silently — no need to announce it unless the pull fails.
+\n---\n
 \n## Active Projects\n
 
 A persistent context repo lives at https://github.com/lrshaid/llm-context (account: lrshaid).
@@ -63,4 +72,4 @@ Local path: `/Users/lautaro.rshaid/llm-context/`
 \n## Rules for LLMs\n
 \n## References\n
 \n## Code Examples\n
-\n_Last synced: 2026-03-12 10:35_
+\n_Last synced: 2026-03-12 10:48_

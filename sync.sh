@@ -82,6 +82,13 @@ echo "\n_Last synced: $(date '+%Y-%m-%d %H:%M')_" >> "$CONTEXT"
 
 # --- 3. Commit and push ---
 cd "$REPO_DIR"
+
+# Ensure remote uses lrshaid credentials
+LRSHAID_TOKEN=$(gh auth token --hostname github.com --user lrshaid 2>/dev/null)
+if [ -n "$LRSHAID_TOKEN" ]; then
+  git remote set-url origin "https://lrshaid:${LRSHAID_TOKEN}@github.com/lrshaid/llm-context.git"
+fi
+
 git add -A
 
 if ! git diff --cached --quiet; then
