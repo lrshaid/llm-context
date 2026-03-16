@@ -3,8 +3,8 @@
 
 set -e
 
-REPO_DIR="/Users/lautarorshaid/llm-context"
-MEMORY_SRC="/Users/lautarorshaid/.claude/projects/-Users-lautarorshaid/memory"
+REPO_DIR="/Users/lautaro.rshaid/llm-context"
+MEMORY_SRC="/Users/lautaro.rshaid/.claude/projects/-/memory"
 
 # --- 1. Route memory files into typed folders ---
 # Clear previous memory-sourced files to avoid stale entries
