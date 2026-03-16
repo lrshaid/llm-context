@@ -7,49 +7,176 @@ Paste it as a system prompt in any LLM to get full context.
 ---
 \n## Who I am\n
 
-# Lautaro Rshaid
-
-**Location:** Buenos Aires, Argentina
-**Email:** lautarorshaid@outlook.com
-**LinkedIn:** https://linkedin.com/in/lautaro-rshaid/
-**GitHub:** lrshaid
-
-## Summary
-
-BI and Analytics Engineer with 7+ years of experience building ETL pipelines, data warehouses, and BI solutions across oil & gas, retail, and consulting industries. Strong bias toward practical, high-impact data work — most projects have a clear dollar figure attached. Industrial Engineer by training, data engineer by practice.
-
-Currently expanding into AI/LLM tooling and automation beyond traditional analytics.
-
-## Technical Skills
-
-**Languages:** SQL (primary), Python, VBA
-**Data tools:** dbt, PySpark, Pandas, NumPy, Alteryx, Knime
-**Cloud & pipelines:** Azure Data Factory, Databricks, AWS Glue, AWS Redshift, Azure Synapse, AWS Step Functions, AWS Athena, Azure Blob Storage, AWS S3, BigQuery
-**Visualization:** Looker, Tableau, PowerBI, QuickSight
-**Cloud platforms:** AWS, Azure, GCP
-
-## Current Role
-
-Analytics Engineer at Mejuri (retail startup) — dbt + BigQuery, Looker, Shopify commerce data, financial reconciliation pipelines.
-
-## Working Style
-
-- Concise and direct — no filler
+- Location: Buenos Aires, Argentina
+- Role: Analytics Engineer at Mejuri (retail startup)
+- Stack: dbt, BigQuery, Looker, Shopify commerce data, financial reconciliation pipelines
+- Primary language: SQL; also Python, VBA
+- Cloud: AWS, Azure, GCP
+- Background: Industrial Engineer by training, data engineer by practice
+- 7+ years across oil & gas, retail, consulting
+- Expanding into AI/LLM tooling and automation
+- Communication style: concise and direct, no filler
+- Expects things said once to stick via memory
 - Systems thinker: wants context and tooling portable across tools and LLMs
-- Expects things said once to stick (via memory and rules)
-- Interested in AI/LLM tooling and automation beyond traditional analytics
+\n---\n
+
+Concise, insightful, bilingual. 1-4 sentences max. English for global/tech, Spanish for LatAm/Argentina.
+
+Optimistic about tech but grounded. Analytical edge from data/consulting background. Subtle humor, not forced.
+
+Avoids: overpolished LLM language, long structured posts, buzzwords, emoji-as-structure, motivational fluff.
+
+Full style guide also saved at ~/llm-context/ideas/writing-style-x.md
 \n---\n
 \n## Rules & Feedback\n
-
-At the start of every new conversation, before doing anything else:
-1. Run `cd /Users/lautaro.rshaid/llm-context && git pull origin main`
-2. Read `/Users/lautaro.rshaid/llm-context/CONTEXT.md`
-3. Use that context throughout the session
-
-**Why:** Lautaro wants full persistent context available in every session regardless of working directory or topic.
-**How to apply:** Always. Do it silently — no need to announce it unless the pull fails.
-\n---\n
 \n## Active Projects\n
+# Clicar.studio — Design Rules
+
+Reference for all future development on clicar.studio. Every UI change, new page, or component must follow these rules to maintain visual consistency.
+
+
+## Color Palette
+
+### Primary Colors
+
+| Name | Value | Usage |
+|------|-------|-------|
+| Brand Green | `#96BF48` | Logo, primary accent, CTA emphasis. Aligned with Shopify's brand green — intentional ecosystem signal. |
+| Black | `#000000` | Primary text, dark sections, dark-mode background |
+| White | `#FFFFFF` | Page background, inverse text, light-mode default |
+
+### Secondary / UI Colors
+
+| Name | Value | Usage |
+|------|-------|-------|
+| Light border | `rgba(0,0,0,0.3)` | Borders, dividers (light mode) |
+| Dark border | `rgba(255,255,255,0.3)` | Borders, dividers (dark mode) |
+| Transparent | `#0000` | Overlay resets |
+
+### Theme Tokens (shadcn/ui)
+
+These CSS variables must be defined in the theme config. Current site uses a monochrome base with green accent:
+
+```
+--primary
+--secondary
+--accent
+--destructive
+--muted
+--background
+--foreground
+--card
+--border
+--input
+--ring
+--popover
+```
+
+### Dark Mode
+
+Supported via `@media (prefers-color-scheme: dark)`. Colors invert: background becomes black, text becomes white, borders swap to white-alpha.
+
+### Color Rules
+
+- The site is **monochrome-dominant**. Avoid introducing new hues.
+- `#96BF48` is the only accent color. Use it sparingly for emphasis — never as a large background fill.
+- Metrics and proof points can use green to draw attention.
+- Do not use red, blue, or other colors unless for semantic meaning (errors, links to external sites).
+
+
+## Layout
+
+### Breakpoints
+
+| Name | Width | Description |
+|------|-------|-------------|
+| sm | 640px | Mobile landscape |
+| md | 768px | Tablet |
+| lg | 1024px | Desktop |
+| xl | 1280px | Wide desktop |
+
+### Spacing
+
+Base unit: `0.25rem` (4px). All spacing should use Tailwind's spacing scale (multiples of 4px).
+
+Common values used on the site:
+
+| Use case | Value |
+|----------|-------|
+| Tight gaps (icon + label) | 0.5rem (2) |
+| Card internal padding | 1–1.5rem (4–6) |
+| Section padding vertical | 3–5rem (12–20) |
+| Section padding horizontal | 1–2rem (4–8), wider on lg+ |
+| Between sections | 4–6rem (16–24) |
+
+### Layout Model
+
+- **Flexbox** for all layouts. Column-based section stacking.
+- No CSS Grid usage observed — keep it flex-based for consistency.
+- Content is **vertically stacked** — single-column hero, then alternating content sections.
+
+
+## Components
+
+### Buttons / CTAs
+
+- Primary CTA text: **"Book a Call Now"**
+- Style: Link-based, not heavy filled buttons — keeps the consultative, premium feel
+- CTA appears exactly **twice** per page: hero and pre-footer section
+- Do not add more CTA instances — scarcity creates focus
+
+### Feature Cards
+
+- Structure: **Title** (semibold/bold) + **Description** (regular weight, lighter tone)
+- Separated by horizontal dividers
+- Grouped under a section heading with intro paragraph
+- No icons currently — text-only cards
+
+### Metrics Display
+
+- Large number (3x, 30%, $0.0M) as the focal point
+- Label/description below in smaller text
+- Displayed in horizontal rows (3 per case study)
+- Numbers should feel bold and immediate
+
+### Case Study Cards
+
+- Structure: Title + narrative paragraph + 3 metric badges
+- Written as mini-stories with concrete outcomes
+- Always include timeline (e.g., "6mo") for credibility
+
+
+## Imagery
+
+### Logo
+
+- File: `clicar_logo_clean.svg`
+- The wordmark "Clicar" is rendered in `#96BF48` green via linear gradient
+- Behind the text: 8 bar-chart rectangles in `#96BF48` at 15% opacity — a data-visualization motif
+- Font in logo: Helvetica Neue, 72px, bold, letter-spacing -2
+- Always use the SVG version for crispness at any size
+
+### Photography / Illustrations
+
+- **Neural network visualizations** (`neural_network.png`, `neural_network_v2.png`) — abstract, dark, data/AI aesthetic
+- No product screenshots, no team photos, no stock photography
+- Imagery should feel **technical and abstract**, not literal
+- Dark-toned data visuals against the white page create contrast
+
+
+## Rules Summary
+
+1. **Monochrome + green.** Black, white, and `#96BF48`. No other colors.
+2. **Montserrat for headings, Open Sans for body.** No other fonts.
+3. **Flat and clean.** Minimal shadows, subtle transitions, generous whitespace.
+4. **Single CTA per viewport.** "Book a Call Now" — twice on the page, no more.
+5. **Metrics over testimonials.** Prove value with numbers, not quotes.
+6. **Consulting tone.** Enterprise vocabulary, conceptual headlines, specific descriptions.
+7. **Abstract data imagery.** Neural networks and visualizations, not stock photos.
+8. **Shopify-aligned green.** The brand color is an intentional ecosystem signal — preserve it.
+9. **Vertical rhythm.** Sections stack top-to-bottom. No complex grid layouts.
+10. **Keep it minimal.** When in doubt, remove — don't add.
+\n---\n
 
 A persistent context repo lives at https://github.com/lrshaid/llm-context (account: lrshaid).
 
@@ -69,7 +196,151 @@ Local path: `/Users/lautaro.rshaid/llm-context/`
 **How to apply:** When the user shares a project detail, idea, rule, or code example, write/update the appropriate file inside `/Users/lautaro.rshaid/llm-context/` so it gets picked up on the next sync push. Also keep `memory/` files updated as usual.
 \n---\n
 \n## Ideas\n
+# Personal Brand Plan — Lautaro Rshaid
+
+**Positioning:** The analytics engineer who bridges BI, data engineering, and AI — with a business-first lens.
+
+**Tagline options:**
+- "From pipelines to prompts"
+- "Data engineer building with AI"
+- "Making data work — from SQL to LLMs"
+
+
+## 4-Week Content Calendar (repeating cycle)
+
+### Week 1 — "AI for the Data Practitioner"
+
+| Day | Platform  | Format              | Topic                                                        |
+|-----|-----------|---------------------|--------------------------------------------------------------|
+| Mon | LinkedIn  | Long post (insight) | How I use LLMs in my daily analytics workflow                |
+| Wed | X         | Thread (3-5 tweets) | 5 things LLMs are actually good at in data engineering       |
+| Fri | X         | Hot take            | "Most AI-for-data tools solve problems nobody has"           |
+
+### Week 2 — "From BI to AI"
+
+| Day | Platform  | Format              | Topic                                                        |
+|-----|-----------|---------------------|--------------------------------------------------------------|
+| Mon | LinkedIn  | Story post          | What I learned switching from dashboards to building with AI |
+| Wed | X         | Quick tip           | One tool or trick from the BI-to-AI transition               |
+| Fri | LinkedIn  | Carousel / list     | "5 skills from BI that transfer directly to AI work"         |
+
+### Week 3 — "Business-Minded Tech"
+
+| Day | Platform  | Format              | Topic                                                        |
+|-----|-----------|---------------------|--------------------------------------------------------------|
+| Mon | LinkedIn  | Long post (insight) | How to put a dollar figure on a data project                 |
+| Wed | X         | Hot take            | "If you can't explain the ROI, you're building a hobby"      |
+| Fri | X         | Thread              | Build vs. buy in data/AI tooling — a framework               |
+
+### Week 4 — "Building in Public"
+
+| Day | Platform  | Format              | Topic                                                        |
+|-----|-----------|---------------------|--------------------------------------------------------------|
+| Mon | X         | Screenshot + story  | Something you built or automated this week                   |
+| Wed | LinkedIn  | Long post           | Behind the scenes of your personal site / llm-context repo   |
+| Fri | X         | Quick tip           | A tool, shortcut, or workflow worth sharing                  |
+
+\n---\n
+# Sample Posts — Personal Brand
+
+## LinkedIn Post 1 — Pillar: AI for the Data Practitioner
+
+I've been an analytics engineer for 7 years. SQL, dbt, pipelines, dashboards — the usual.
+
+Last year I started integrating LLMs into my actual workflow. Not as a toy. As a tool.
+
+Here's what actually works:
+
+→ Generating dbt model documentation from source schema + business context
+→ Writing first-draft SQL from plain English specs (then reviewing it like a PR)
+→ Automating data quality checks — describe the rule in words, get the test
+→ Building portable context systems so every AI tool I use knows my stack
+
+Here's what doesn't work (yet):
+
+→ Letting LLMs write production pipeline logic unsupervised
+→ "AI-powered dashboards" that nobody asked for
+→ Replacing domain knowledge with prompt engineering
+
+The engineers who'll win aren't the ones who know the most about AI.
+They're the ones who know their domain deeply enough to use AI where it matters.
+
+What's one place you've actually found LLMs useful in your data work?
+
+
+## X Thread — Pillar: AI for the Data Practitioner
+
+🧵 5 things LLMs are actually good at in data engineering (from someone who does this daily):
+
+1/ Writing dbt docs.
+Nobody likes writing descriptions for 200 columns. Give the LLM the schema + a few examples and review the output. 10x faster, 90% accurate.
+
+2/ First-draft SQL from specs.
+"Revenue by channel, last 90 days, excluding refunds." Paste that into Claude with your schema context. You'll still review it, but the blank page problem is gone.
+
+3/ Data quality rules in plain English.
+"Flag any order where total < sum of line items." Turns into a dbt test in seconds.
+
+4/ Explaining legacy code.
+That 400-line stored procedure nobody wants to touch? LLMs are great at reading code you don't want to read.
+
+5/ Building portable context.
+I keep a repo with my full profile, stack, and project context. Every LLM I use gets the same starting point. No re-explaining.
+
+What's NOT on this list: replacing your judgment, writing production code unsupervised, or making dashboards "with AI."
+
+
+## LinkedIn Post 3 — Pillar: Business-Minded Tech
+
+Every data project I've worked on had a dollar figure attached to it.
+
+Not because I'm obsessed with ROI — because that's how you get buy-in, keep funding, and prove the work matters.
+
+Here's a simple framework:
+
+1. What decision does this enable?
+2. What's the cost of making that decision wrong (or late)?
+3. How much faster/better does this project make that decision?
+
+If you can't answer those three questions, you don't have a data project. You have a science experiment.
+
+Nothing wrong with experiments. Just don't sell them as projects.
+
+\n---\n
+
+# Writing Style — X (@lautirshaid)
+
+Concise, insightful, bilingual. Blends optimism about tech with practical realism on economics, AI, and career paths.
+
+## Key traits
+
+- **Brevity and directness:** 1-4 sentences max. Core idea, no excess.
+- **Reply-dominant and engaging:** Lots of responses adding value, extending thoughts, offering advice. Conversational, collaborative — not standalone declarations.
+- **Bilingual fluidity:** English for global/tech. Spanish for Argentina/LatAm contexts. Switches seamlessly.
+- **Optimistic yet grounded:** Enthusiasm for tech/AI, balanced by pragmatic notes on real challenges.
+- **Analytical edge:** Emphasizes critical thinking, positioning, implications. Consulting/data background shows.
+- **Subtle humor/lightness:** Occasional wit without forcing it.
+
+## Tone
+
+Professional, forward-thinking, approachable. Quick high-value insights from someone immersed in tech, econ, and global life. Sparks discussion, doesn't chase virality.
+
+## What to avoid
+
+- Overpolished or "LLM-sounding" language
+- Long structured posts with bullets or headers
+- Buzzwords, hype language, motivational fluff
+- Emojis as structure (🧵, 🔥, etc.)
+\n---\n
 \n## Rules for LLMs\n
 \n## References\n
+
+- Repo: https://github.com/lrshaid/llm-context.git
+- Local path: ~/llm-context/
+- Structure: memory/, projects/, ideas/, rules/, code-examples/
+- Sync: sync.sh runs via crontab every 4h (17 */4 * * *)
+- Logs: /tmp/llm-context-sync.log
+- When user shares a project detail, idea, rule, or code example, write/update the appropriate file inside ~/llm-context/ so it gets picked up on next sync
+\n---\n
 \n## Code Examples\n
-\n_Last synced: 2026-03-15 12:45_
+\n_Last synced: 2026-03-16 09:43_
