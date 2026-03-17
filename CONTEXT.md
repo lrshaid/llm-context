@@ -205,6 +205,58 @@ Common values used on the site:
 10. **Keep it minimal.** When in doubt, remove — don't add.
 \n---\n
 
+# Order Delays
+
+**Goal:** Automate how Ops communicates package delays to CX so they can proactively notify customers.
+
+## Current state
+
+- Ops team manually pulls a spreadsheet from Fufil (ERP) to inform CX of delays. Error-prone and manual.
+- Pipeline rule: only reports delays when planned date shifts by 7+ days → Lautaro's proposed fix: report any order with more than one planned ship date, adjust rules later if noisy.
+
+## Status
+
+- Meeting with Kristy and Jenn happened — Lautaro couldn't attend due to EMV incident. Need to follow up on what was decided.
+- Related to OTIF project.
+
+## Next steps
+
+- Follow up with Kristy/Jenn on meeting outcomes.
+- Define the delay reporting threshold (7-day rule vs. any change).
+\n---\n
+
+# OTIF — On Time In Full
+
+**Goal:** Measure how often Mejuri fails to deliver on time. "In Full" is implicit — calculation is at line item level.
+
+## Open decisions
+
+- **Granularity:** Currently calculated at shipping level. Jenn (Senior Ops leader) requested line item level. To be defined in Wednesday 2026-03-18 meeting.
+- **Planned date change window:** Current logic treats any planned date change within a 6-hour window as the same attempt, so expected replanning doesn't count as a delay.
+
+## Related
+
+Closely tied to Order Delays project — both deal with shipping date changes, different business need.
+\n---\n
+
+# Retail Analytics
+
+## WBR (Weekly Business Review)
+
+- Need to understand how Retail team currently does their WBR: how much time it takes, where the pain is.
+- Goal: help automate the process.
+
+## Clientelling
+
+- Patrik Riverin described an effective clientelling Looker dashboard from a previous role: showed items a customer purchased + what they viewed on site, enabling targeted outreach.
+- DK pushed back — hyper-personalized clientelling may not make sense for Mejuri since it's not super high-end.
+- DK's ask instead: **services dashboard revamp**.
+
+## Status
+
+- Scope still blurred. Next step is to align on priorities: WBR automation vs. clientelling vs. services dashboard.
+\n---\n
+
 A persistent context repo lives at https://github.com/lrshaid/llm-context (account: lrshaid).
 
 Local path: `/Users/lautaro.rshaid/llm-context/`
@@ -373,4 +425,4 @@ When helping Lautaro write messages (community posts, DMs, LinkedIn, Slack, etc.
 \n---\n
 \n## References\n
 \n## Code Examples\n
-\n_Last synced: 2026-03-16 16:18_
+\n_Last synced: 2026-03-17 11:24_
