@@ -2,6 +2,8 @@
 name: Order Delays
 type: project
 description: Mejuri Ops — automate delay communication to CX, replacing manual spreadsheet from Fufil ERP
+created: 2026-03-17
+updated: 2026-03-17
 ---
 
 # Order Delays
@@ -22,3 +24,10 @@ description: Mejuri Ops — automate delay communication to CX, replacing manual
 
 - Follow up with Kristy/Jenn on meeting outcomes.
 - Define the delay reporting threshold (7-day rule vs. any change).
+
+## Log
+
+- **2026-03-13** — EMV incident: pipeline partition issue caused exchanges to miss reclassification. Fixed with daily full refresh + partition fix.
+- **2026-03-14** — EMV confirmed resolved (36k, in line with previous days).
+- **2026-03-16** — Proposed to Jenn: report any order with >1 planned ship date, adjust rules later.
+- **2026-03-17** — Project documented. Need to follow up on missed meeting with Kristy/Jenn.

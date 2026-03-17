@@ -223,6 +223,13 @@ Common values used on the site:
 
 - Follow up with Kristy/Jenn on meeting outcomes.
 - Define the delay reporting threshold (7-day rule vs. any change).
+
+## Log
+
+- **2026-03-13** — EMV incident: pipeline partition issue caused exchanges to miss reclassification. Fixed with daily full refresh + partition fix.
+- **2026-03-14** — EMV confirmed resolved (36k, in line with previous days).
+- **2026-03-16** — Proposed to Jenn: report any order with >1 planned ship date, adjust rules later.
+- **2026-03-17** — Project documented. Need to follow up on missed meeting with Kristy/Jenn.
 \n---\n
 
 # OTIF — On Time In Full
@@ -237,6 +244,10 @@ Common values used on the site:
 ## Related
 
 Closely tied to Order Delays project — both deal with shipping date changes, different business need.
+
+## Log
+
+- **2026-03-17** — Project documented. Waiting on Wednesday meeting to define line item vs shipping level.
 \n---\n
 
 # Retail Analytics
@@ -255,6 +266,10 @@ Closely tied to Order Delays project — both deal with shipping date changes, d
 ## Status
 
 - Scope still blurred. Next step is to align on priorities: WBR automation vs. clientelling vs. services dashboard.
+
+## Log
+
+- **2026-03-17** — Project documented. Last meeting covered clientelling (Patrik vs DK debate). Need to scope WBR automation and services dashboard revamp.
 \n---\n
 
 A persistent context repo lives at https://github.com/lrshaid/llm-context (account: lrshaid).
@@ -425,4 +440,4 @@ When helping Lautaro write messages (community posts, DMs, LinkedIn, Slack, etc.
 \n---\n
 \n## References\n
 \n## Code Examples\n
-\n_Last synced: 2026-03-17 11:24_
+\n_Last synced: 2026-03-17 13:26_

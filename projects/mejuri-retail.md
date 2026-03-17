@@ -2,6 +2,8 @@
 name: Retail Analytics
 type: project
 description: Mejuri Retail — WBR automation, clientelling dashboards, services dashboard revamp
+created: 2026-03-17
+updated: 2026-03-17
 ---
 
 # Retail Analytics
@@ -20,3 +22,7 @@ description: Mejuri Retail — WBR automation, clientelling dashboards, services
 ## Status
 
 - Scope still blurred. Next step is to align on priorities: WBR automation vs. clientelling vs. services dashboard.
+
+## Log
+
+- **2026-03-17** — Project documented. Last meeting covered clientelling (Patrik vs DK debate). Need to scope WBR automation and services dashboard revamp.
