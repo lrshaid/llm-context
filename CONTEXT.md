@@ -29,6 +29,22 @@ Avoids: overpolished LLM language, long structured posts, buzzwords, emoji-as-st
 Full style guide also saved at ~/llm-context/ideas/writing-style-x.md
 \n---\n
 \n## Rules & Feedback\n
+
+At the start of every new conversation, before doing anything else:
+1. Run `cd /Users/lautaro.rshaid/llm-context && git pull origin main`
+2. Read `/Users/lautaro.rshaid/llm-context/CONTEXT.md`
+3. Use that context throughout the session
+
+**Why:** Lautaro wants full persistent context available in every session regardless of working directory or topic.
+**How to apply:** Always. Do it silently — no need to announce it unless the pull fails.
+\n---\n
+
+When drafting or editing messages for Lautaro, always write with confidence.
+No hedging, no qualifiers, no softeners. Direct and assertive.
+
+**Why:** He wants to inspire confidence in his writing.
+**How to apply:** Any message draft — community posts, DMs, LinkedIn, Slack, emails. Check for weak language and rewrite.
+\n---\n
 \n## Active Projects\n
 # Clicar.studio — Design Rules
 
@@ -424,4 +440,8 @@ When helping Lautaro write messages (community posts, DMs, LinkedIn, Slack, etc.
 - When user shares a project detail, idea, rule, or code example, write/update the appropriate file inside ~/llm-context/ so it gets picked up on next sync
 \n---\n
 \n## Code Examples\n
+<<<<<<< Updated upstream
 \n_Last synced: 2026-03-18 10:46_
+=======
+\n_Last synced: 2026-03-18 10:49_
+>>>>>>> Stashed changes
