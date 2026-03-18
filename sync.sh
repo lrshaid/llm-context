@@ -3,8 +3,8 @@
 
 set -e
 
-REPO_DIR="/Users/lautaro.rshaid/llm-context"
-MEMORY_SRC="/Users/lautaro.rshaid/.claude/projects/-/memory"
+REPO_DIR="$HOME/llm-context"
+MEMORY_SRC=$(find "$HOME/.claude/projects" -maxdepth 2 -type d -name "memory" -path "*-Users-*" | head -1)
 
 # --- 1. Route memory files into typed folders ---
 # Clear previous memory-sourced files to avoid stale entries
@@ -88,6 +88,11 @@ LRSHAID_TOKEN=$(gh auth token --hostname github.com --user lrshaid 2>/dev/null)
 if [ -n "$LRSHAID_TOKEN" ]; then
   git remote set-url origin "https://lrshaid:${LRSHAID_TOKEN}@github.com/lrshaid/llm-context.git"
 fi
+
+git add -A
+git stash
+git pull --rebase origin main
+git stash pop 2>/dev/null || true
 
 git add -A
 
