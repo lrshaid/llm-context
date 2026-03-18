@@ -7,11 +7,7 @@ REPO_DIR="$HOME/llm-context"
 MEMORY_SRC=$(find "$HOME/.claude/projects" -maxdepth 2 -type d -name "memory" -path "*-Users-*" | head -1)
 
 # --- 1. Route memory files into typed folders ---
-# Clear previous memory-sourced files to avoid stale entries
-# Use find instead of glob to avoid zsh "no matches found" errors
-find "$REPO_DIR/user" -name "*.md" -delete 2>/dev/null || true
-find "$REPO_DIR/feedback" -name "*.md" -delete 2>/dev/null || true
-find "$REPO_DIR/references" -name "*.md" -delete 2>/dev/null || true
+# Only overwrite files that exist in local memory — don't delete files from other laptops
 
 if [ -d "$MEMORY_SRC" ]; then
   for file in "$MEMORY_SRC"/*.md; do
