@@ -8,10 +8,10 @@ MEMORY_SRC="/Users/lautaro.rshaid/.claude/projects/-/memory"
 
 # --- 1. Route memory files into typed folders ---
 # Clear previous memory-sourced files to avoid stale entries
-rm -f "$REPO_DIR"/user/*.md
-rm -f "$REPO_DIR"/feedback/*.md
-rm -f "$REPO_DIR"/projects/llm-context-repo.md  # only the auto-generated one
-rm -f "$REPO_DIR"/references/*.md
+# Use find instead of glob to avoid zsh "no matches found" errors
+find "$REPO_DIR/user" -name "*.md" -delete 2>/dev/null || true
+find "$REPO_DIR/feedback" -name "*.md" -delete 2>/dev/null || true
+find "$REPO_DIR/references" -name "*.md" -delete 2>/dev/null || true
 
 if [ -d "$MEMORY_SRC" ]; then
   for file in "$MEMORY_SRC"/*.md; do
