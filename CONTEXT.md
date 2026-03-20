@@ -5,7 +5,9 @@ This file aggregates all context needed to work with Lautaro.
 Paste it as a system prompt in any LLM to get full context.
 
 ---
-\n## Who I am\n
+
+## Who I am
+
 
 - Location: Buenos Aires, Argentina
 - Role: Analytics Engineer at Mejuri (retail startup)
@@ -18,7 +20,9 @@ Paste it as a system prompt in any LLM to get full context.
 - Communication style: concise and direct, no filler
 - Expects things said once to stick via memory
 - Systems thinker: wants context and tooling portable across tools and LLMs
-\n---\n
+
+---
+
 
 Concise, insightful, bilingual. 1-4 sentences max. English for global/tech, Spanish for LatAm/Argentina.
 
@@ -27,8 +31,12 @@ Optimistic about tech but grounded. Analytical edge from data/consulting backgro
 Avoids: overpolished LLM language, long structured posts, buzzwords, emoji-as-structure, motivational fluff.
 
 Full style guide also saved at ~/llm-context/ideas/writing-style-x.md
-\n---\n
-\n## Rules & Feedback\n
+
+---
+
+
+## Rules & Feedback
+
 
 At the start of every new conversation, before doing anything else:
 1. Run `cd /Users/lautaro.rshaid/llm-context && git pull origin main`
@@ -37,15 +45,21 @@ At the start of every new conversation, before doing anything else:
 
 **Why:** Lautaro wants full persistent context available in every session regardless of working directory or topic.
 **How to apply:** Always. Do it silently — no need to announce it unless the pull fails.
-\n---\n
+
+---
+
 
 When drafting or editing messages for Lautaro, always write with confidence.
 No hedging, no qualifiers, no softeners. Direct and assertive.
 
 **Why:** He wants to inspire confidence in his writing.
 **How to apply:** Any message draft — community posts, DMs, LinkedIn, Slack, emails. Check for weak language and rewrite.
-\n---\n
-\n## Active Projects\n
+
+---
+
+
+## Active Projects
+
 # Clicar.studio — Design Rules
 
 Reference for all future development on clicar.studio. Every UI change, new page, or component must follow these rules to maintain visual consistency.
@@ -192,7 +206,9 @@ Common values used on the site:
 8. **Shopify-aligned green.** The brand color is an intentional ecosystem signal — preserve it.
 9. **Vertical rhythm.** Sections stack top-to-bottom. No complex grid layouts.
 10. **Keep it minimal.** When in doubt, remove — don't add.
-\n---\n
+
+---
+
 
 # Order Delays
 
@@ -219,7 +235,9 @@ Common values used on the site:
 - **2026-03-14** — EMV confirmed resolved (36k, in line with previous days).
 - **2026-03-16** — Proposed to Jenn: report any order with >1 planned ship date, adjust rules later.
 - **2026-03-17** — Project documented. Need to follow up on missed meeting with Kristy/Jenn.
-\n---\n
+
+---
+
 
 # OTIF — On Time In Full
 
@@ -237,7 +255,9 @@ Closely tied to Order Delays project — both deal with shipping date changes, d
 ## Log
 
 - **2026-03-17** — Project documented. Waiting on Wednesday meeting to define line item vs shipping level.
-\n---\n
+
+---
+
 
 # Retail Analytics
 
@@ -259,7 +279,9 @@ Closely tied to Order Delays project — both deal with shipping date changes, d
 ## Log
 
 - **2026-03-17** — Project documented. Last meeting covered clientelling (Patrik vs DK debate). Need to scope WBR automation and services dashboard revamp.
-\n---\n
+
+---
+
 
 A persistent context repo lives at https://github.com/lrshaid/llm-context (account: lrshaid).
 
@@ -277,8 +299,12 @@ Local path: `/Users/lautaro.rshaid/llm-context/`
 **Why:** User wants a single source of truth usable with multiple LLMs, not just Claude.
 
 **How to apply:** When the user shares a project detail, idea, rule, or code example, write/update the appropriate file inside `/Users/lautaro.rshaid/llm-context/` so it gets picked up on the next sync push. Also keep `memory/` files updated as usual.
-\n---\n
-\n## Ideas\n
+
+---
+
+
+## Ideas
+
 # Personal Brand Plan — Lautaro Rshaid
 
 **Positioning:** The analytics engineer who bridges BI, data engineering, and AI — with a business-first lens.
@@ -323,7 +349,9 @@ Local path: `/Users/lautaro.rshaid/llm-context/`
 | Wed | LinkedIn  | Long post           | Behind the scenes of your personal site / llm-context repo   |
 | Fri | X         | Quick tip           | A tool, shortcut, or workflow worth sharing                  |
 
-\n---\n
+
+---
+
 # Sample Posts — Personal Brand
 
 ## LinkedIn Post 1 — Pillar: AI for the Data Practitioner
@@ -389,7 +417,9 @@ If you can't answer those three questions, you don't have a data project. You ha
 
 Nothing wrong with experiments. Just don't sell them as projects.
 
-\n---\n
+
+---
+
 
 # Writing Style — X (@lautirshaid)
 
@@ -414,8 +444,12 @@ Professional, forward-thinking, approachable. Quick high-value insights from som
 - Long structured posts with bullets or headers
 - Buzzwords, hype language, motivational fluff
 - Emojis as structure (🧵, 🔥, etc.)
-\n---\n
-\n## Rules for LLMs\n
+
+---
+
+
+## Rules for LLMs
+
 
 When helping Lautaro write messages (community posts, DMs, LinkedIn, Slack, etc.), always write with confidence.
 
@@ -429,8 +463,12 @@ When helping Lautaro write messages (community posts, DMs, LinkedIn, Slack, etc.
 
 **Why:** Lautaro wants to inspire confidence in his writing.
 **How to apply:** Any time you draft or edit a message for him, check for weak/hesitant language and rewrite it to sound sure-footed. In Spanish, skip the `¿`.
-\n---\n
-\n## References\n
+
+---
+
+
+## References
+
 
 - Repo: https://github.com/lrshaid/llm-context.git
 - Local path: ~/llm-context/
@@ -438,7 +476,8 @@ When helping Lautaro write messages (community posts, DMs, LinkedIn, Slack, etc.
 - Sync: sync.sh runs via crontab every 4h (17 */4 * * *)
 - Logs: /tmp/llm-context-sync.log
 - When user shares a project detail, idea, rule, or code example, write/update the appropriate file inside ~/llm-context/ so it gets picked up on next sync
-\n---\n
+
+---
 
 ## Accelerators
 
@@ -495,6 +534,9 @@ When helping Lautaro write messages (community posts, DMs, LinkedIn, Slack, etc.
 ## Marketing
 
 - **Marketing Skills by Corey Haines** — https://skills.sh/coreyhaines31/marketingskills
-\n---\n
-\n## Code Examples\n
-\n_Last synced: 2026-03-20 08:15_
+
+---
+
+
+## Code Examples
+
