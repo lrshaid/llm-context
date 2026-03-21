@@ -42,6 +42,19 @@ At the start of every new conversation, before doing anything else:
 **How to apply:** Always. Do it silently — no need to announce it unless the pull fails.
 \n---\n
 
+When writing SQL with multiple CTEs, place the comma before the CTE name on the same line, not after the closing parenthesis of the previous CTE.
+
+Example:
+```sql
+with first_cte as (
+    ...
+)
+, second_cte as (
+    ...
+)
+```
+\n---\n
+
 When drafting or editing messages for Lautaro, always write with confidence.
 No hedging, no qualifiers, no softeners. Direct and assertive.
 
@@ -500,4 +513,4 @@ When helping Lautaro write messages (community posts, DMs, LinkedIn, Slack, etc.
 - **Marketing Skills by Corey Haines** — https://skills.sh/coreyhaines31/marketingskills
 \n---\n
 \n## Code Examples\n
-\n_Last synced: 2026-03-21 15:17_
+\n_Last synced: 2026-03-21 17:17_
