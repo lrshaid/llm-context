@@ -5,9 +5,17 @@ This file aggregates all context needed to work with Lautaro.
 Paste it as a system prompt in any LLM to get full context.
 
 ---
+\n## Who I am\n
 
-## Who I am
+Current data development workflow at Mejuri:
 
+- **IDE**: VS Code with Claude integration
+- **Data stack**: BigQuery + dbt CLI
+- **BI/Reporting**: Omni (with AI context augmentation)
+- **LLM context**: Persistent context repo (~/llm-context) synced across tools
+
+Using AI to augment the full data development cycle — writing/reviewing SQL and dbt models in VS Code with Claude, then surfacing insights through Omni with AI context augmentation.
+\n---\n
 
 - Location: Buenos Aires, Argentina
 - Role: Analytics Engineer at Mejuri (retail startup)
@@ -20,9 +28,7 @@ Paste it as a system prompt in any LLM to get full context.
 - Communication style: concise and direct, no filler
 - Expects things said once to stick via memory
 - Systems thinker: wants context and tooling portable across tools and LLMs
-
----
-
+\n---\n
 
 Concise, insightful, bilingual. 1-4 sentences max. English for global/tech, Spanish for LatAm/Argentina.
 
@@ -31,17 +37,11 @@ Optimistic about tech but grounded. Analytical edge from data/consulting backgro
 Avoids: overpolished LLM language, long structured posts, buzzwords, emoji-as-structure, motivational fluff.
 
 Full style guide also saved at ~/llm-context/ideas/writing-style-x.md
-
----
-
-
-## Rules & Feedback
-
+\n---\n
+\n## Rules & Feedback\n
 
 When Lautaro says to finish/end the session, always commit and push any pending changes in ~/llm-context/ to GitHub before wrapping up.
-
----
-
+\n---\n
 
 At the start of every new conversation, before doing anything else:
 1. Run `cd /Users/lautaro.rshaid/llm-context && git pull origin main`
@@ -50,36 +50,48 @@ At the start of every new conversation, before doing anything else:
 
 **Why:** Lautaro wants full persistent context available in every session regardless of working directory or topic.
 **How to apply:** Always. Do it silently — no need to announce it unless the pull fails.
+\n---\n
 
----
+When the user says "finish" or ends a session, only commit and push ~/llm-context. Do not automatically commit or push changes in other repos (webapp, etc.) — only do that when explicitly asked.
+\n---\n
 
-
-When writing SQL with multiple CTEs, place the comma before the CTE name on the same line, not after the closing parenthesis of the previous CTE.
+- **Columns**: trailing commas (comma at end of line)
+- **CTEs**: leading commas (comma before CTE name on same line)
 
 Example:
 ```sql
 with first_cte as (
-    ...
+    select
+        id,
+        name,
+        created_at
+    from table_a
 )
 , second_cte as (
-    ...
+    select
+        id,
+        value
+    from table_b
 )
+select
+    a.id,
+    a.name,
+    b.value
+from first_cte a
+left join second_cte b on a.id = b.id
 ```
+\n---\n
 
----
-
+When saving or updating any memory file, always include a `created` field in the frontmatter (date of first save) and an `updated` field when modifying an existing memory. Format: YYYY-MM-DD.
+\n---\n
 
 When drafting or editing messages for Lautaro, always write with confidence.
 No hedging, no qualifiers, no softeners. Direct and assertive.
 
 **Why:** He wants to inspire confidence in his writing.
 **How to apply:** Any message draft — community posts, DMs, LinkedIn, Slack, emails. Check for weak language and rewrite.
-
----
-
-
-## Active Projects
-
+\n---\n
+\n## Active Projects\n
 # Clicar.studio — Design Rules
 
 Reference for all future development on clicar.studio. Every UI change, new page, or component must follow these rules to maintain visual consistency.
@@ -226,9 +238,7 @@ Common values used on the site:
 8. **Shopify-aligned green.** The brand color is an intentional ecosystem signal — preserve it.
 9. **Vertical rhythm.** Sections stack top-to-bottom. No complex grid layouts.
 10. **Keep it minimal.** When in doubt, remove — don't add.
-
----
-
+\n---\n
 
 # Order Delays
 
@@ -255,9 +265,7 @@ Common values used on the site:
 - **2026-03-14** — EMV confirmed resolved (36k, in line with previous days).
 - **2026-03-16** — Proposed to Jenn: report any order with >1 planned ship date, adjust rules later.
 - **2026-03-17** — Project documented. Need to follow up on missed meeting with Kristy/Jenn.
-
----
-
+\n---\n
 
 # OTIF — On Time In Full
 
@@ -275,9 +283,7 @@ Closely tied to Order Delays project — both deal with shipping date changes, d
 ## Log
 
 - **2026-03-17** — Project documented. Waiting on Wednesday meeting to define line item vs shipping level.
-
----
-
+\n---\n
 
 # Retail Analytics
 
@@ -299,9 +305,7 @@ Closely tied to Order Delays project — both deal with shipping date changes, d
 ## Log
 
 - **2026-03-17** — Project documented. Last meeting covered clientelling (Patrik vs DK debate). Need to scope WBR automation and services dashboard revamp.
-
----
-
+\n---\n
 
 A persistent context repo lives at https://github.com/lrshaid/llm-context (account: lrshaid).
 
@@ -319,12 +323,21 @@ Local path: `/Users/lautaro.rshaid/llm-context/`
 **Why:** User wants a single source of truth usable with multiple LLMs, not just Claude.
 
 **How to apply:** When the user shares a project detail, idea, rule, or code example, write/update the appropriate file inside `/Users/lautaro.rshaid/llm-context/` so it gets picked up on the next sync push. Also keep `memory/` files updated as usual.
+\n---\n
 
----
+Built a set of BigQuery queries analyzing Stack Overflow data (bigquery-public-data.stackoverflow). Published to https://github.com/lrshaid/stackoverflow-bigquery-analysis
 
+Three questions, four queries:
+- **Q1 Part 1**: Top/bottom 20 individual tags by avg answers (p90 threshold = 75+ questions)
+- **Q1 Part 2**: Top/bottom 20 tag pairs — self-cross join with deduplication (`t1 < t2`)
+- **Q2**: Python vs dbt YoY answer rate and accepted rate (regex for exact tag matching, `lag()` for YoY)
+- **Q3**: Post quality correlations — 7 features (title length, body length, code presence, tag count, hour, day of week, author reputation) bucketed via `union all`
 
-## Ideas
+Key finding from Q3: shorter title + shorter body = higher accepted rate. Author reputation showed poor correlation.
 
+Also connected to BigQuery CLI (`bq` via gcloud, authenticated as lautarorshaid@gmail.com, project: triple-acre-469215-p0).
+\n---\n
+\n## Ideas\n
 # Personal Brand Plan — Lautaro Rshaid
 
 **Positioning:** The analytics engineer who bridges BI, data engineering, and AI — with a business-first lens.
@@ -369,9 +382,7 @@ Local path: `/Users/lautaro.rshaid/llm-context/`
 | Wed | LinkedIn  | Long post           | Behind the scenes of your personal site / llm-context repo   |
 | Fri | X         | Quick tip           | A tool, shortcut, or workflow worth sharing                  |
 
-
----
-
+\n---\n
 # Sample Posts — Personal Brand
 
 ## LinkedIn Post 1 — Pillar: AI for the Data Practitioner
@@ -437,9 +448,7 @@ If you can't answer those three questions, you don't have a data project. You ha
 
 Nothing wrong with experiments. Just don't sell them as projects.
 
-
----
-
+\n---\n
 
 # Writing Style — X (@lautirshaid)
 
@@ -464,12 +473,8 @@ Professional, forward-thinking, approachable. Quick high-value insights from som
 - Long structured posts with bullets or headers
 - Buzzwords, hype language, motivational fluff
 - Emojis as structure (🧵, 🔥, etc.)
-
----
-
-
-## Rules for LLMs
-
+\n---\n
+\n## Rules for LLMs\n
 
 When helping Lautaro write messages (community posts, DMs, LinkedIn, Slack, etc.), always write with confidence.
 
@@ -483,12 +488,71 @@ When helping Lautaro write messages (community posts, DMs, LinkedIn, Slack, etc.
 
 **Why:** Lautaro wants to inspire confidence in his writing.
 **How to apply:** Any time you draft or edit a message for him, check for weak/hesitant language and rewrite it to sound sure-footed. In Spanish, skip the `¿`.
+\n---\n
+\n## References\n
 
----
+## Tell us what shaped you (3 parts + one-line goal)
+
+**Early influences**
+I've always been drawn to business problems — spotting inefficiencies, pulling them apart, figuring out how to fix them. That curiosity led me to Industrial Engineering, where I learned to see every business as a system with levers to pull.
+
+**Key turning point**
+My first job threw me into an oil & gas company to automate their data. Their systems were a mess (spreadsheets everywhere, no visibility). I built an automated system that showed refinery performance. The moment the operators saw it, their faces said everything. The real impact isn't in the data, it's in making it visible to the people who need it.
+
+**What drives me now**
+I love building systems that scale — systems that tell you how the business is actually doing, what the next move should be, and which levers to turn when something's off. Customer behavior analytics, forecast models, demand intelligence — building decision engines that drive action.
+
+**One-line goal:** Build analytics systems that turn complex data into the next best decision.
 
 
-## References
+## Explain how you have designed analytical or metric models using first-principles thinking
 
+I start from the business need: what's the problem, and what can I build to help them succeed?
+
+For customer propensity, I broke it down to raw signals — recency, frequency, category affinity, time between purchases — and built from there instead of importing a generic framework.
+
+For inventory, I decomposed "right product, right place, right time" into sell-through rate, weeks of supply, and reorder velocity — each tied to the actual cost of getting it wrong.
+
+For profitability, I rebuilt the P&L at the product level from raw transactions. Revenue minus COGS isn't margin — returns, discounts, shipping, and fulfillment were hiding where money was actually lost.
+
+The principle is always the same: decompose into the smallest measurable parts, validate each one and build up.
+
+
+## Describe your experience working with Funnel data
+
+I've worked with funnel data mainly in e-commerce — tracking sessions through to purchase, segmented by channel and customer type. The goal was always to understand where drop-off happens and where spend is actually converting.
+
+On the event tracking side, I've used Segment to manage event collection and route data to downstream tools and warehouses — having clean, consistent events is what makes funnel analysis reliable.
+
+\n---\n
+
+## Article 1: "Lessons from Building Claude Code: How We Use Skills" — Thariq (@trq212, Anthropic)
+**Date:** 2026-03-17
+**Source:** https://x.com/trq212/status/2033949937936085378
+
+### Skill Categories
+1. **Library & API Reference** — how to use a library/CLI correctly, gotchas, code snippets
+2. **Product Verification** — test/verify code works (playwright, tmux, video recording, assertions)
+3. **Data Fetching & Analysis** — connect to data stacks, credentials, dashboard IDs, common workflows
+4. **Business Process & Team Automation** — standup posts, ticket creation, weekly recaps
+5. **Code Scaffolding & Templates** — generate boilerplate for specific patterns
+6. **Code Quality & Review** — enforce style, adversarial review, testing practices
+7. **CI/CD & Deployment** — babysit PRs, deploy pipelines, cherry-picks
+8. **Runbooks** — symptom → investigation → structured report
+9. **Infrastructure Operations** — orphan cleanup, dependency management, cost investigation
+
+### Best Practices
+- Skills are **folders**, not just markdown — include scripts, data, templates, references
+- Focus on **gotchas** (where Claude fails), not obvious stuff
+- **Progressive disclosure** — split details into subfiles (`references/`, `scripts/`, `examples/`)
+- Don't over-specify — give info but let Claude adapt
+- **Store memory in the skill** (logs, config.json) for continuity — use `${CLAUDE_PLUGIN_DATA}` for stable storage
+- Include **helper scripts** Claude can compose
+- **Description field is for the model** — write it as a trigger condition, not a summary
+- **On-demand hooks** in skills for opinionated behavior (e.g., `/careful` blocks destructive commands)
+- Distribution: check into repo (`.claude/skills`) or plugin marketplace for scale
+
+\n---\n
 
 - Repo: https://github.com/lrshaid/llm-context.git
 - Local path: ~/llm-context/
@@ -496,9 +560,7 @@ When helping Lautaro write messages (community posts, DMs, LinkedIn, Slack, etc.
 - Sync: sync.sh runs via crontab every 4h (17 */4 * * *)
 - Logs: /tmp/llm-context-sync.log
 - When user shares a project detail, idea, rule, or code example, write/update the appropriate file inside ~/llm-context/ so it gets picked up on next sync
-
----
-
+\n---\n
 
 ## Accelerators
 
@@ -555,9 +617,6 @@ When helping Lautaro write messages (community posts, DMs, LinkedIn, Slack, etc.
 ## Marketing
 
 - **Marketing Skills by Corey Haines** — https://skills.sh/coreyhaines31/marketingskills
-
----
-
-
-## Code Examples
-
+\n---\n
+\n## Code Examples\n
+\n_Last synced: 2026-03-24 10:17_

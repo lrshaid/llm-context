@@ -1,17 +1,32 @@
 ---
 name: SQL comma style
-description: When writing SQL CTEs, the comma separator goes before the CTE name on the same line (e.g. ", cte_name as (")
+description: Trailing commas in column lists, leading commas before CTE names
 type: feedback
+updated: 2026-03-24
 ---
 
-When writing SQL with multiple CTEs, place the comma before the CTE name on the same line, not after the closing parenthesis of the previous CTE.
+- **Columns**: trailing commas (comma at end of line)
+- **CTEs**: leading commas (comma before CTE name on same line)
 
 Example:
 ```sql
 with first_cte as (
-    ...
+    select
+        id,
+        name,
+        created_at
+    from table_a
 )
 , second_cte as (
-    ...
+    select
+        id,
+        value
+    from table_b
 )
+select
+    a.id,
+    a.name,
+    b.value
+from first_cte a
+left join second_cte b on a.id = b.id
 ```
