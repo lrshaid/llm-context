@@ -1,6 +1,6 @@
 ---
 created: 2026-03-16
-updated: 2026-03-16
+updated: 2026-03-28
 tags:
   - type/idea
   - brand
@@ -43,8 +43,8 @@ Tools, experiments, personal site, automations.
 
 | Day | Platform  | Format              | Topic                                                        |
 |-----|-----------|---------------------|--------------------------------------------------------------|
-| Mon | LinkedIn  | Long post (insight) | How I use LLMs in my daily analytics workflow                |
-| Wed | X         | Thread (3-5 tweets) | 5 things LLMs are actually good at in data engineering       |
+| Mon | X         | Thread (3-5 tweets) | 5 things LLMs are actually good at in data engineering       |
+| Wed | LinkedIn  | Post                | LLM-powered custom viz replacing dashboards (skills as guardrails) |
 | Fri | X         | Hot take            | "Most AI-for-data tools solve problems nobody has"           |
 
 ### Week 2 -- "From BI to AI"

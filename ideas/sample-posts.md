@@ -1,6 +1,6 @@
 ---
 created: 2026-03-16
-updated: 2026-03-16
+updated: 2026-03-28
 tags:
   - type/idea
   - brand
@@ -103,6 +103,30 @@ Here's a simple framework:
 If you can't answer those three questions, you don't have a data project. You have a science experiment.
 
 Nothing wrong with experiments. Just don't sell them as projects.
+
+---
+
+## X Post -- Pillar: AI for the Data Practitioner (Week 1 Mon teaser)
+
+Dashboarding is dead.
+
+You build 50, people still Slack you "can you pull this?"
+
+The replacement: LLM writes the query, generates the viz, scoped by skills that know your data model. Custom report on the fly. No maintenance.
+
+---
+
+## LinkedIn Post -- Pillar: AI for the Data Practitioner (Week 1 Wed)
+
+Dashboards are reports pretending to be tools. You build 50 of them, and people still ask "can you pull this for me?"
+
+I'm building something different for ecomm: you ask a question, the LLM writes the query, runs it against your warehouse, and generates the exact visualization you need. No pre-built charts. No "self-serve" that nobody actually serves themselves.
+
+The trick is skills — scoped instructions that tell the model which tables to hit, what the metrics mean, and what it's not allowed to touch. Guardrails, not vibes.
+
+The result: every answer is a custom report built on the fly. No dashboard maintenance. No stale filters. No "we need a new tab for that."
+
+Dashboards had their run. The next layer is data tools that think with you.
 
 ---
 

@@ -1,12 +1,9 @@
 ---
-created: 2026-03-21
+name: SQL comma style
+description: Trailing commas in column lists, leading commas before CTE names
+type: feedback
 updated: 2026-03-24
-tags:
-  - type/feedback
-  - sql
 ---
-
-# SQL Comma Style
 
 - **Columns**: trailing commas (comma at end of line)
 - **CTEs**: leading commas (comma before CTE name on same line)
@@ -33,5 +30,3 @@ select
 from first_cte a
 left join second_cte b on a.id = b.id
 ```
-
-See also: [[user_ai_workflow]]
