@@ -1,14 +1,18 @@
 ---
-name: OTIF (On Time In Full)
-type: project
-description: Mejuri Ops — OTIF metric calculation and pipeline, meeting Wednesday to define scope
 created: 2026-03-17
 updated: 2026-03-17
+tags:
+  - type/project
+  - mejuri
+  - ops
+  - pipeline
+aliases:
+  - otif
 ---
 
-# OTIF — On Time In Full
+# OTIF -- On Time In Full
 
-**Goal:** Measure how often Mejuri fails to deliver on time. "In Full" is implicit — calculation is at line item level.
+**Goal:** Measure how often Mejuri fails to deliver on time. "In Full" is implicit -- calculation is at line item level.
 
 ## Open decisions
 
@@ -17,8 +21,10 @@ updated: 2026-03-17
 
 ## Related
 
-Closely tied to Order Delays project — both deal with shipping date changes, different business need.
+Closely tied to [[mejuri-order-delays]] -- both deal with shipping date changes, different business need.
 
 ## Log
 
-- **2026-03-17** — Project documented. Waiting on Wednesday meeting to define line item vs shipping level.
+- **2026-03-17** -- Project documented. Waiting on Wednesday meeting to define line item vs shipping level.
+
+See also: [[mejuri-order-delays]], [[mejuri-retail]]

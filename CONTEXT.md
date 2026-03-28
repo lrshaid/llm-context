@@ -5,9 +5,7 @@ This file aggregates all context needed to work with Lautaro.
 Paste it as a system prompt in any LLM to get full context.
 
 ---
-
-## Who I am
-
+\n## Who I am\n
 
 Current data development workflow at Mejuri:
 
@@ -17,9 +15,7 @@ Current data development workflow at Mejuri:
 - **LLM context**: Persistent context repo (~/llm-context) synced across tools
 
 Using AI to augment the full data development cycle — writing/reviewing SQL and dbt models in VS Code with Claude, then surfacing insights through Omni with AI context augmentation.
-
----
-
+\n---\n
 
 - Location: Buenos Aires, Argentina
 - Role: Analytics Engineer at Mejuri (retail startup)
@@ -32,9 +28,7 @@ Using AI to augment the full data development cycle — writing/reviewing SQL an
 - Communication style: concise and direct, no filler
 - Expects things said once to stick via memory
 - Systems thinker: wants context and tooling portable across tools and LLMs
-
----
-
+\n---\n
 
 Concise, insightful, bilingual. 1-4 sentences max. English for global/tech, Spanish for LatAm/Argentina.
 
@@ -43,33 +37,29 @@ Optimistic about tech but grounded. Analytical edge from data/consulting backgro
 Avoids: overpolished LLM language, long structured posts, buzzwords, emoji-as-structure, motivational fluff.
 
 Full style guide also saved at ~/llm-context/ideas/writing-style-x.md
-
----
-
-
-## Rules & Feedback
-
+\n---\n
+\n## Rules & Feedback\n
 
 When Lautaro says to finish/end the session, always commit and push any pending changes in ~/llm-context/ to GitHub before wrapping up.
+\n---\n
 
----
-
+# Pull Context Repo on Session Start
 
 At the start of every new conversation, before doing anything else:
 1. Run `cd /Users/lautaro.rshaid/llm-context && git pull origin main`
 2. Read `/Users/lautaro.rshaid/llm-context/CONTEXT.md`
 3. Use that context throughout the session
 
-**Why:** Lautaro wants full persistent context available in every session regardless of working directory or topic.
-**How to apply:** Always. Do it silently — no need to announce it unless the pull fails.
+> [!info] Why
+> Lautaro wants full persistent context available in every session regardless of working directory or topic.
 
----
+**How to apply:** Always. Do it silently -- no need to announce it unless the pull fails.
 
+See also: project_llm_context_repo, reference_llm_context_repo
+\n---\n
 
 When the user says "finish" or ends a session, only commit and push ~/llm-context. Do not automatically commit or push changes in other repos (webapp, etc.) — only do that when explicitly asked.
-
----
-
+\n---\n
 
 - **Columns**: trailing commas (comma at end of line)
 - **CTEs**: leading commas (comma before CTE name on same line)
@@ -96,27 +86,26 @@ select
 from first_cte a
 left join second_cte b on a.id = b.id
 ```
-
----
-
+\n---\n
 
 When saving or updating any memory file, always include a `created` field in the frontmatter (date of first save) and an `updated` field when modifying an existing memory. Format: YYYY-MM-DD.
+\n---\n
 
----
-
+# Write with Confidence
 
 When drafting or editing messages for Lautaro, always write with confidence.
 No hedging, no qualifiers, no softeners. Direct and assertive.
 
-**Why:** He wants to inspire confidence in his writing.
-**How to apply:** Any message draft — community posts, DMs, LinkedIn, Slack, emails. Check for weak language and rewrite.
+> [!info] Why
+> He wants to inspire confidence in his writing.
 
----
+**How to apply:** Any message draft -- community posts, DMs, LinkedIn, Slack, emails. Check for weak language and rewrite.
 
+See also: writing-style, user_writing_style_x
+\n---\n
+\n## Active Projects\n
 
-## Active Projects
-
-# Clicar.studio — Design Rules
+# Clicar.studio -- Design Rules
 
 Reference for all future development on clicar.studio. Every UI change, new page, or component must follow these rules to maintain visual consistency.
 
@@ -127,7 +116,7 @@ Reference for all future development on clicar.studio. Every UI change, new page
 
 | Name | Value | Usage |
 |------|-------|-------|
-| Brand Green | `#96BF48` | Logo, primary accent, CTA emphasis. Aligned with Shopify's brand green — intentional ecosystem signal. |
+| Brand Green | `#96BF48` | Logo, primary accent, CTA emphasis. Aligned with Shopify's brand green -- intentional ecosystem signal. |
 | Black | `#000000` | Primary text, dark sections, dark-mode background |
 | White | `#FFFFFF` | Page background, inverse text, light-mode default |
 
@@ -165,7 +154,7 @@ Supported via `@media (prefers-color-scheme: dark)`. Colors invert: background b
 ### Color Rules
 
 - The site is **monochrome-dominant**. Avoid introducing new hues.
-- `#96BF48` is the only accent color. Use it sparingly for emphasis — never as a large background fill.
+- `#96BF48` is the only accent color. Use it sparingly for emphasis -- never as a large background fill.
 - Metrics and proof points can use green to draw attention.
 - Do not use red, blue, or other colors unless for semantic meaning (errors, links to external sites).
 
@@ -190,16 +179,16 @@ Common values used on the site:
 | Use case | Value |
 |----------|-------|
 | Tight gaps (icon + label) | 0.5rem (2) |
-| Card internal padding | 1–1.5rem (4–6) |
-| Section padding vertical | 3–5rem (12–20) |
-| Section padding horizontal | 1–2rem (4–8), wider on lg+ |
-| Between sections | 4–6rem (16–24) |
+| Card internal padding | 1--1.5rem (4--6) |
+| Section padding vertical | 3--5rem (12--20) |
+| Section padding horizontal | 1--2rem (4--8), wider on lg+ |
+| Between sections | 4--6rem (16--24) |
 
 ### Layout Model
 
 - **Flexbox** for all layouts. Column-based section stacking.
-- No CSS Grid usage observed — keep it flex-based for consistency.
-- Content is **vertically stacked** — single-column hero, then alternating content sections.
+- No CSS Grid usage observed -- keep it flex-based for consistency.
+- Content is **vertically stacked** -- single-column hero, then alternating content sections.
 
 
 ## Components
@@ -207,16 +196,16 @@ Common values used on the site:
 ### Buttons / CTAs
 
 - Primary CTA text: **"Book a Call Now"**
-- Style: Link-based, not heavy filled buttons — keeps the consultative, premium feel
+- Style: Link-based, not heavy filled buttons -- keeps the consultative, premium feel
 - CTA appears exactly **twice** per page: hero and pre-footer section
-- Do not add more CTA instances — scarcity creates focus
+- Do not add more CTA instances -- scarcity creates focus
 
 ### Feature Cards
 
 - Structure: **Title** (semibold/bold) + **Description** (regular weight, lighter tone)
 - Separated by horizontal dividers
 - Grouped under a section heading with intro paragraph
-- No icons currently — text-only cards
+- No icons currently -- text-only cards
 
 ### Metrics Display
 
@@ -238,13 +227,13 @@ Common values used on the site:
 
 - File: `clicar_logo_clean.svg`
 - The wordmark "Clicar" is rendered in `#96BF48` green via linear gradient
-- Behind the text: 8 bar-chart rectangles in `#96BF48` at 15% opacity — a data-visualization motif
+- Behind the text: 8 bar-chart rectangles in `#96BF48` at 15% opacity -- a data-visualization motif
 - Font in logo: Helvetica Neue, 72px, bold, letter-spacing -2
 - Always use the SVG version for crispness at any size
 
 ### Photography / Illustrations
 
-- **Neural network visualizations** (`neural_network.png`, `neural_network_v2.png`) — abstract, dark, data/AI aesthetic
+- **Neural network visualizations** (`neural_network.png`, `neural_network_v2.png`) -- abstract, dark, data/AI aesthetic
 - No product screenshots, no team photos, no stock photography
 - Imagery should feel **technical and abstract**, not literal
 - Dark-toned data visuals against the white page create contrast
@@ -255,16 +244,16 @@ Common values used on the site:
 1. **Monochrome + green.** Black, white, and `#96BF48`. No other colors.
 2. **Montserrat for headings, Open Sans for body.** No other fonts.
 3. **Flat and clean.** Minimal shadows, subtle transitions, generous whitespace.
-4. **Single CTA per viewport.** "Book a Call Now" — twice on the page, no more.
+4. **Single CTA per viewport.** "Book a Call Now" -- twice on the page, no more.
 5. **Metrics over testimonials.** Prove value with numbers, not quotes.
 6. **Consulting tone.** Enterprise vocabulary, conceptual headlines, specific descriptions.
 7. **Abstract data imagery.** Neural networks and visualizations, not stock photos.
-8. **Shopify-aligned green.** The brand color is an intentional ecosystem signal — preserve it.
+8. **Shopify-aligned green.** The brand color is an intentional ecosystem signal -- preserve it.
 9. **Vertical rhythm.** Sections stack top-to-bottom. No complex grid layouts.
-10. **Keep it minimal.** When in doubt, remove — don't add.
+10. **Keep it minimal.** When in doubt, remove -- don't add.
 
----
-
+See also: user_profile
+\n---\n
 
 # Order Delays
 
@@ -273,12 +262,12 @@ Common values used on the site:
 ## Current state
 
 - Ops team manually pulls a spreadsheet from Fufil (ERP) to inform CX of delays. Error-prone and manual.
-- Pipeline rule: only reports delays when planned date shifts by 7+ days → Lautaro's proposed fix: report any order with more than one planned ship date, adjust rules later if noisy.
+- Pipeline rule: only reports delays when planned date shifts by 7+ days. Lautaro's proposed fix: report any order with more than one planned ship date, adjust rules later if noisy.
 
 ## Status
 
-- Meeting with Kristy and Jenn happened — Lautaro couldn't attend due to EMV incident. Need to follow up on what was decided.
-- Related to OTIF project.
+- Meeting with Kristy and Jenn happened -- Lautaro couldn't attend due to EMV incident. Need to follow up on what was decided.
+- Related to mejuri-otif.
 
 ## Next steps
 
@@ -287,17 +276,17 @@ Common values used on the site:
 
 ## Log
 
-- **2026-03-13** — EMV incident: pipeline partition issue caused exchanges to miss reclassification. Fixed with daily full refresh + partition fix.
-- **2026-03-14** — EMV confirmed resolved (36k, in line with previous days).
-- **2026-03-16** — Proposed to Jenn: report any order with >1 planned ship date, adjust rules later.
-- **2026-03-17** — Project documented. Need to follow up on missed meeting with Kristy/Jenn.
+- **2026-03-13** -- EMV incident: pipeline partition issue caused exchanges to miss reclassification. Fixed with daily full refresh + partition fix.
+- **2026-03-14** -- EMV confirmed resolved (36k, in line with previous days).
+- **2026-03-16** -- Proposed to Jenn: report any order with >1 planned ship date, adjust rules later.
+- **2026-03-17** -- Project documented. Need to follow up on missed meeting with Kristy/Jenn.
 
----
+See also: mejuri-otif, mejuri-retail
+\n---\n
 
+# OTIF -- On Time In Full
 
-# OTIF — On Time In Full
-
-**Goal:** Measure how often Mejuri fails to deliver on time. "In Full" is implicit — calculation is at line item level.
+**Goal:** Measure how often Mejuri fails to deliver on time. "In Full" is implicit -- calculation is at line item level.
 
 ## Open decisions
 
@@ -306,14 +295,14 @@ Common values used on the site:
 
 ## Related
 
-Closely tied to Order Delays project — both deal with shipping date changes, different business need.
+Closely tied to mejuri-order-delays -- both deal with shipping date changes, different business need.
 
 ## Log
 
-- **2026-03-17** — Project documented. Waiting on Wednesday meeting to define line item vs shipping level.
+- **2026-03-17** -- Project documented. Waiting on Wednesday meeting to define line item vs shipping level.
 
----
-
+See also: mejuri-order-delays, mejuri-retail
+\n---\n
 
 # Retail Analytics
 
@@ -325,7 +314,7 @@ Closely tied to Order Delays project — both deal with shipping date changes, d
 ## Clientelling
 
 - Patrik Riverin described an effective clientelling Looker dashboard from a previous role: showed items a customer purchased + what they viewed on site, enabling targeted outreach.
-- DK pushed back — hyper-personalized clientelling may not make sense for Mejuri since it's not super high-end.
+- DK pushed back -- hyper-personalized clientelling may not make sense for Mejuri since it's not super high-end.
 - DK's ask instead: **services dashboard revamp**.
 
 ## Status
@@ -334,30 +323,34 @@ Closely tied to Order Delays project — both deal with shipping date changes, d
 
 ## Log
 
-- **2026-03-17** — Project documented. Last meeting covered clientelling (Patrik vs DK debate). Need to scope WBR automation and services dashboard revamp.
+- **2026-03-17** -- Project documented. Last meeting covered clientelling (Patrik vs DK debate). Need to scope WBR automation and services dashboard revamp.
 
----
+See also: mejuri-order-delays, mejuri-otif, user_profile
+\n---\n
 
+# LLM Context Repo
 
 A persistent context repo lives at https://github.com/lrshaid/llm-context (account: lrshaid).
 
 Local path: `/Users/lautaro.rshaid/llm-context/`
 
 **Structure:**
-- `memory/` — synced from `~/.claude/projects/-/memory/` automatically
-- `projects/` — active/past project details
-- `ideas/` — ideas shared across sessions
-- `rules/` — instructions for LLMs to follow
-- `code-examples/` — useful snippets and patterns
+- `user/` -- profile, workflow, writing style
+- `feedback/` -- corrections and behavior rules
+- `projects/` -- active/past project details
+- `ideas/` -- ideas shared across sessions
+- `rules/` -- instructions for LLMs to follow
+- `references/` -- external systems, articles, resources
 
 **Sync:** `sync.sh` runs via system crontab every 4 hours (`17 */4 * * *`). Logs to `/tmp/llm-context-sync.log`.
 
-**Why:** User wants a single source of truth usable with multiple LLMs, not just Claude.
+> [!info] Why
+> User wants a single source of truth usable with multiple LLMs, not just Claude.
 
-**How to apply:** When the user shares a project detail, idea, rule, or code example, write/update the appropriate file inside `/Users/lautaro.rshaid/llm-context/` so it gets picked up on the next sync push. Also keep `memory/` files updated as usual.
+**How to apply:** When the user shares a project detail, idea, rule, or code example, write/update the appropriate file inside `/Users/lautaro.rshaid/llm-context/` so it gets picked up on the next sync push.
 
----
-
+See also: reference_llm_context_repo, feedback_context_sync, user_ai_workflow
+\n---\n
 
 Built a set of BigQuery queries analyzing Stack Overflow data (bigquery-public-data.stackoverflow). Published to https://github.com/lrshaid/stackoverflow-bigquery-analysis
 
@@ -370,25 +363,22 @@ Three questions, four queries:
 Key finding from Q3: shorter title + shorter body = higher accepted rate. Author reputation showed poor correlation.
 
 Also connected to BigQuery CLI (`bq` via gcloud, authenticated as lautarorshaid@gmail.com, project: triple-acre-469215-p0).
+\n---\n
+\n## Ideas\n
 
----
+# Personal Brand Plan
 
-
-## Ideas
-
-# Personal Brand Plan — Lautaro Rshaid
-
-**Positioning:** The analytics engineer who bridges BI, data engineering, and AI — with a business-first lens.
+**Positioning:** The analytics engineer who bridges BI, data engineering, and AI -- with a business-first lens.
 
 **Tagline options:**
 - "From pipelines to prompts"
 - "Data engineer building with AI"
-- "Making data work — from SQL to LLMs"
+- "Making data work -- from SQL to LLMs"
 
 
 ## 4-Week Content Calendar (repeating cycle)
 
-### Week 1 — "AI for the Data Practitioner"
+### Week 1 -- "AI for the Data Practitioner"
 
 | Day | Platform  | Format              | Topic                                                        |
 |-----|-----------|---------------------|--------------------------------------------------------------|
@@ -396,7 +386,7 @@ Also connected to BigQuery CLI (`bq` via gcloud, authenticated as lautarorshaid@
 | Wed | X         | Thread (3-5 tweets) | 5 things LLMs are actually good at in data engineering       |
 | Fri | X         | Hot take            | "Most AI-for-data tools solve problems nobody has"           |
 
-### Week 2 — "From BI to AI"
+### Week 2 -- "From BI to AI"
 
 | Day | Platform  | Format              | Topic                                                        |
 |-----|-----------|---------------------|--------------------------------------------------------------|
@@ -404,15 +394,15 @@ Also connected to BigQuery CLI (`bq` via gcloud, authenticated as lautarorshaid@
 | Wed | X         | Quick tip           | One tool or trick from the BI-to-AI transition               |
 | Fri | LinkedIn  | Carousel / list     | "5 skills from BI that transfer directly to AI work"         |
 
-### Week 3 — "Business-Minded Tech"
+### Week 3 -- "Business-Minded Tech"
 
 | Day | Platform  | Format              | Topic                                                        |
 |-----|-----------|---------------------|--------------------------------------------------------------|
 | Mon | LinkedIn  | Long post (insight) | How to put a dollar figure on a data project                 |
 | Wed | X         | Hot take            | "If you can't explain the ROI, you're building a hobby"      |
-| Fri | X         | Thread              | Build vs. buy in data/AI tooling — a framework               |
+| Fri | X         | Thread              | Build vs. buy in data/AI tooling -- a framework              |
 
-### Week 4 — "Building in Public"
+### Week 4 -- "Building in Public"
 
 | Day | Platform  | Format              | Topic                                                        |
 |-----|-----------|---------------------|--------------------------------------------------------------|
@@ -420,29 +410,28 @@ Also connected to BigQuery CLI (`bq` via gcloud, authenticated as lautarorshaid@
 | Wed | LinkedIn  | Long post           | Behind the scenes of your personal site / llm-context repo   |
 | Fri | X         | Quick tip           | A tool, shortcut, or workflow worth sharing                  |
 
+\n---\n
 
----
+# Sample Posts -- Personal Brand
 
-# Sample Posts — Personal Brand
+## LinkedIn Post 1 -- Pillar: AI for the Data Practitioner
 
-## LinkedIn Post 1 — Pillar: AI for the Data Practitioner
-
-I've been an analytics engineer for 7 years. SQL, dbt, pipelines, dashboards — the usual.
+I've been an analytics engineer for 7 years. SQL, dbt, pipelines, dashboards -- the usual.
 
 Last year I started integrating LLMs into my actual workflow. Not as a toy. As a tool.
 
 Here's what actually works:
 
-→ Generating dbt model documentation from source schema + business context
-→ Writing first-draft SQL from plain English specs (then reviewing it like a PR)
-→ Automating data quality checks — describe the rule in words, get the test
-→ Building portable context systems so every AI tool I use knows my stack
+> Generating dbt model documentation from source schema + business context
+> Writing first-draft SQL from plain English specs (then reviewing it like a PR)
+> Automating data quality checks -- describe the rule in words, get the test
+> Building portable context systems so every AI tool I use knows my stack
 
 Here's what doesn't work (yet):
 
-→ Letting LLMs write production pipeline logic unsupervised
-→ "AI-powered dashboards" that nobody asked for
-→ Replacing domain knowledge with prompt engineering
+> Letting LLMs write production pipeline logic unsupervised
+> "AI-powered dashboards" that nobody asked for
+> Replacing domain knowledge with prompt engineering
 
 The engineers who'll win aren't the ones who know the most about AI.
 They're the ones who know their domain deeply enough to use AI where it matters.
@@ -450,9 +439,9 @@ They're the ones who know their domain deeply enough to use AI where it matters.
 What's one place you've actually found LLMs useful in your data work?
 
 
-## X Thread — Pillar: AI for the Data Practitioner
+## X Thread -- Pillar: AI for the Data Practitioner
 
-🧵 5 things LLMs are actually good at in data engineering (from someone who does this daily):
+5 things LLMs are actually good at in data engineering (from someone who does this daily):
 
 1/ Writing dbt docs.
 Nobody likes writing descriptions for 200 columns. Give the LLM the schema + a few examples and review the output. 10x faster, 90% accurate.
@@ -472,11 +461,11 @@ I keep a repo with my full profile, stack, and project context. Every LLM I use 
 What's NOT on this list: replacing your judgment, writing production code unsupervised, or making dashboards "with AI."
 
 
-## LinkedIn Post 3 — Pillar: Business-Minded Tech
+## LinkedIn Post 3 -- Pillar: Business-Minded Tech
 
 Every data project I've worked on had a dollar figure attached to it.
 
-Not because I'm obsessed with ROI — because that's how you get buy-in, keep funding, and prove the work matters.
+Not because I'm obsessed with ROI -- because that's how you get buy-in, keep funding, and prove the work matters.
 
 Here's a simple framework:
 
@@ -488,18 +477,16 @@ If you can't answer those three questions, you don't have a data project. You ha
 
 Nothing wrong with experiments. Just don't sell them as projects.
 
+\n---\n
 
----
-
-
-# Writing Style — X (@lautirshaid)
+# Writing Style -- X (@lautirshaid)
 
 Concise, insightful, bilingual. Blends optimism about tech with practical realism on economics, AI, and career paths.
 
 ## Key traits
 
 - **Brevity and directness:** 1-4 sentences max. Core idea, no excess.
-- **Reply-dominant and engaging:** Lots of responses adding value, extending thoughts, offering advice. Conversational, collaborative — not standalone declarations.
+- **Reply-dominant and engaging:** Lots of responses adding value, extending thoughts, offering advice. Conversational, collaborative -- not standalone declarations.
 - **Bilingual fluidity:** English for global/tech. Spanish for Argentina/LatAm contexts. Switches seamlessly.
 - **Optimistic yet grounded:** Enthusiasm for tech/AI, balanced by pragmatic notes on real challenges.
 - **Analytical edge:** Emphasizes critical thinking, positioning, implications. Consulting/data background shows.
@@ -514,32 +501,32 @@ Professional, forward-thinking, approachable. Quick high-value insights from som
 - Overpolished or "LLM-sounding" language
 - Long structured posts with bullets or headers
 - Buzzwords, hype language, motivational fluff
-- Emojis as structure (🧵, 🔥, etc.)
+- Emojis as structure
 
----
+See also: user_writing_style_x, writing-style, personal-brand-plan
+\n---\n
+\n## Rules for LLMs\n
 
-
-## Rules for LLMs
-
+# Writing Style Rules
 
 When helping Lautaro write messages (community posts, DMs, LinkedIn, Slack, etc.), always write with confidence.
 
 - No hedging ("I think", "maybe", "kind of", "I was wondering if")
 - No unnecessary qualifiers or softeners
-- Direct, assertive tone — state things, don't ask permission to state them
+- Direct, assertive tone -- state things, don't ask permission to state them
 - If unsure about something, say it plainly rather than wrapping it in doubt
 
 **Spanish writing:**
-- Questions use only the closing `?`, not the opening `¿`. Example: "Hay alguien con ese perfil por aca?" not "¿Hay alguien con ese perfil por acá?"
+- Questions use only the closing `?`, not the opening. Example: "Hay alguien con ese perfil por aca?" not "Hay alguien con ese perfil por aca?"
 
-**Why:** Lautaro wants to inspire confidence in his writing.
-**How to apply:** Any time you draft or edit a message for him, check for weak/hesitant language and rewrite it to sound sure-footed. In Spanish, skip the `¿`.
+> [!info] Why
+> Lautaro wants to inspire confidence in his writing.
 
----
+**How to apply:** Any time you draft or edit a message for him, check for weak/hesitant language and rewrite it to sound sure-footed. In Spanish, skip the opening question mark.
 
-
-## References
-
+See also: feedback_writing_confidence, user_writing_style_x, writing-style-x
+\n---\n
+\n## References\n
 
 ## Tell us what shaped you (3 parts + one-line goal)
 
@@ -574,9 +561,7 @@ I've worked with funnel data mainly in e-commerce — tracking sessions through 
 
 On the event tracking side, I've used Segment to manage event collection and route data to downstream tools and warehouses — having clean, consistent events is what makes funnel analysis reliable.
 
-
----
-
+\n---\n
 
 ## Article 1: "Lessons from Building Claude Code: How We Use Skills" — Thariq (@trq212, Anthropic)
 **Date:** 2026-03-17
@@ -604,9 +589,7 @@ On the event tracking side, I've used Segment to manage event collection and rou
 - **On-demand hooks** in skills for opinionated behavior (e.g., `/careful` blocks destructive commands)
 - Distribution: check into repo (`.claude/skills`) or plugin marketplace for scale
 
-
----
-
+\n---\n
 
 - Repo: https://github.com/lrshaid/llm-context.git
 - Local path: ~/llm-context/
@@ -614,9 +597,7 @@ On the event tracking side, I've used Segment to manage event collection and rou
 - Sync: sync.sh runs via crontab every 4h (17 */4 * * *)
 - Logs: /tmp/llm-context-sync.log
 - When user shares a project detail, idea, rule, or code example, write/update the appropriate file inside ~/llm-context/ so it gets picked up on next sync
-
----
-
+\n---\n
 
 ## Accelerators
 
@@ -673,9 +654,6 @@ On the event tracking side, I've used Segment to manage event collection and rou
 ## Marketing
 
 - **Marketing Skills by Corey Haines** — https://skills.sh/coreyhaines31/marketingskills
-
----
-
-
-## Code Examples
-
+\n---\n
+\n## Code Examples\n
+\n_Last synced: 2026-03-28 08:17_

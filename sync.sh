@@ -28,6 +28,7 @@ if [ -d "$MEMORY_SRC" ]; then
 fi
 
 # --- 2. Auto-generate CONTEXT.md (full aggregated context for pasting into any LLM) ---
+# Wiki-links are stripped so CONTEXT.md is clean for non-Obsidian LLMs
 CONTEXT="$REPO_DIR/CONTEXT.md"
 cat > "$CONTEXT" << 'HEADER'
 # Full LLM Context — Lautaro Rshaid
@@ -39,39 +40,44 @@ Paste it as a system prompt in any LLM to get full context.
 ---
 HEADER
 
+# Helper: strip frontmatter and wiki-links from a file
+strip_for_context() {
+  sed '/^---$/,/^---$/d' "$1" | sed 's/\[\[\([^]|]*\)|\([^]]*\)\]\]/\2/g; s/\[\[\([^]]*\)\]\]/\1/g'
+}
+
 echo "\n## Who I am\n" >> "$CONTEXT"
 for f in "$REPO_DIR"/user/*.md; do
-  [ -f "$f" ] && sed '/^---$/,/^---$/d' "$f" >> "$CONTEXT" && echo "\n---\n" >> "$CONTEXT"
+  [ -f "$f" ] && strip_for_context "$f" >> "$CONTEXT" && echo "\n---\n" >> "$CONTEXT"
 done
 
 echo "\n## Rules & Feedback\n" >> "$CONTEXT"
 for f in "$REPO_DIR"/feedback/*.md; do
-  [ -f "$f" ] && sed '/^---$/,/^---$/d' "$f" >> "$CONTEXT" && echo "\n---\n" >> "$CONTEXT"
+  [ -f "$f" ] && strip_for_context "$f" >> "$CONTEXT" && echo "\n---\n" >> "$CONTEXT"
 done
 
 echo "\n## Active Projects\n" >> "$CONTEXT"
 for f in "$REPO_DIR"/projects/*.md; do
-  [ -f "$f" ] && sed '/^---$/,/^---$/d' "$f" >> "$CONTEXT" && echo "\n---\n" >> "$CONTEXT"
+  [ -f "$f" ] && strip_for_context "$f" >> "$CONTEXT" && echo "\n---\n" >> "$CONTEXT"
 done
 
 echo "\n## Ideas\n" >> "$CONTEXT"
 for f in "$REPO_DIR"/ideas/*.md; do
-  [ -f "$f" ] && sed '/^---$/,/^---$/d' "$f" >> "$CONTEXT" && echo "\n---\n" >> "$CONTEXT"
+  [ -f "$f" ] && strip_for_context "$f" >> "$CONTEXT" && echo "\n---\n" >> "$CONTEXT"
 done
 
 echo "\n## Rules for LLMs\n" >> "$CONTEXT"
 for f in "$REPO_DIR"/rules/*.md; do
-  [ -f "$f" ] && sed '/^---$/,/^---$/d' "$f" >> "$CONTEXT" && echo "\n---\n" >> "$CONTEXT"
+  [ -f "$f" ] && strip_for_context "$f" >> "$CONTEXT" && echo "\n---\n" >> "$CONTEXT"
 done
 
 echo "\n## References\n" >> "$CONTEXT"
 for f in "$REPO_DIR"/references/*.md; do
-  [ -f "$f" ] && sed '/^---$/,/^---$/d' "$f" >> "$CONTEXT" && echo "\n---\n" >> "$CONTEXT"
+  [ -f "$f" ] && strip_for_context "$f" >> "$CONTEXT" && echo "\n---\n" >> "$CONTEXT"
 done
 
 echo "\n## Code Examples\n" >> "$CONTEXT"
 for f in "$REPO_DIR"/code-examples/*.md; do
-  [ -f "$f" ] && sed '/^---$/,/^---$/d' "$f" >> "$CONTEXT" && echo "\n---\n" >> "$CONTEXT"
+  [ -f "$f" ] && strip_for_context "$f" >> "$CONTEXT" && echo "\n---\n" >> "$CONTEXT"
 done
 
 echo "\n_Last synced: $(date '+%Y-%m-%d %H:%M')_" >> "$CONTEXT"

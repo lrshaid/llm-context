@@ -1,8 +1,17 @@
 ---
-name: Lautaro Rshaid — Profile
-description: BI/Analytics Engineer in Buenos Aires, 7+ years experience, SQL-primary, currently at Mejuri with dbt+BigQuery+Looker, expanding into AI/LLM tooling
-type: user
+created: 2026-03-12
+updated: 2026-03-18
+tags:
+  - type/user
+  - mejuri
+  - career
+  - sql
+  - ai
+aliases:
+  - profile
 ---
+
+# Lautaro Rshaid -- Profile
 
 - Location: Buenos Aires, Argentina
 - Role: Analytics Engineer at Mejuri (retail startup)
@@ -15,3 +24,5 @@ type: user
 - Communication style: concise and direct, no filler
 - Expects things said once to stick via memory
 - Systems thinker: wants context and tooling portable across tools and LLMs
+
+See also: [[user_ai_workflow]], [[user_writing_style_x]], [[interview_answers]]

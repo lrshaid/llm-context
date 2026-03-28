@@ -1,9 +1,13 @@
 ---
-name: Order Delays
-type: project
-description: Mejuri Ops — automate delay communication to CX, replacing manual spreadsheet from Fufil ERP
 created: 2026-03-17
 updated: 2026-03-17
+tags:
+  - type/project
+  - mejuri
+  - ops
+  - pipeline
+aliases:
+  - order delays
 ---
 
 # Order Delays
@@ -13,12 +17,12 @@ updated: 2026-03-17
 ## Current state
 
 - Ops team manually pulls a spreadsheet from Fufil (ERP) to inform CX of delays. Error-prone and manual.
-- Pipeline rule: only reports delays when planned date shifts by 7+ days → Lautaro's proposed fix: report any order with more than one planned ship date, adjust rules later if noisy.
+- Pipeline rule: only reports delays when planned date shifts by 7+ days. Lautaro's proposed fix: report any order with more than one planned ship date, adjust rules later if noisy.
 
 ## Status
 
-- Meeting with Kristy and Jenn happened — Lautaro couldn't attend due to EMV incident. Need to follow up on what was decided.
-- Related to OTIF project.
+- Meeting with Kristy and Jenn happened -- Lautaro couldn't attend due to EMV incident. Need to follow up on what was decided.
+- Related to [[mejuri-otif]].
 
 ## Next steps
 
@@ -27,7 +31,9 @@ updated: 2026-03-17
 
 ## Log
 
-- **2026-03-13** — EMV incident: pipeline partition issue caused exchanges to miss reclassification. Fixed with daily full refresh + partition fix.
-- **2026-03-14** — EMV confirmed resolved (36k, in line with previous days).
-- **2026-03-16** — Proposed to Jenn: report any order with >1 planned ship date, adjust rules later.
-- **2026-03-17** — Project documented. Need to follow up on missed meeting with Kristy/Jenn.
+- **2026-03-13** -- EMV incident: pipeline partition issue caused exchanges to miss reclassification. Fixed with daily full refresh + partition fix.
+- **2026-03-14** -- EMV confirmed resolved (36k, in line with previous days).
+- **2026-03-16** -- Proposed to Jenn: report any order with >1 planned ship date, adjust rules later.
+- **2026-03-17** -- Project documented. Need to follow up on missed meeting with Kristy/Jenn.
+
+See also: [[mejuri-otif]], [[mejuri-retail]]

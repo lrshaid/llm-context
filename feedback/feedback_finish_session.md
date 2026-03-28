@@ -1,7 +1,13 @@
 ---
-name: Finish session behavior
-description: When ending a session, only commit/push llm-context — do not auto-push other repos unless explicitly asked
-type: feedback
+created: 2026-03-24
+updated: 2026-03-24
+tags:
+  - type/feedback
+  - workflow
 ---
 
-When the user says "finish" or ends a session, only commit and push ~/llm-context. Do not automatically commit or push changes in other repos (webapp, etc.) — only do that when explicitly asked.
+# Finish Session Behavior
+
+When the user says "finish" or ends a session, only commit and push ~/llm-context. Do not automatically commit or push changes in other repos (webapp, etc.) -- only do that when explicitly asked.
+
+See also: [[feedback_commit_push_on_exit]]
