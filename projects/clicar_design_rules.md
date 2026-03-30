@@ -323,4 +323,4 @@ Avoid: cheap, easy, simple, basic, DIY, hack, trick
 9. **Vertical rhythm.** Sections stack top-to-bottom. No complex grid layouts.
 10. **Keep it minimal.** When in doubt, remove -- don't add.
 
-See also: [[user_profile]]
+See also: [[user_profile]], [[clicar_content_strategy]]

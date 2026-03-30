@@ -25,6 +25,7 @@ aliases:
 
 ### Side Projects
 - [[clicar_design_rules]] -- Design system for clicar.studio
+- [[clicar_content_strategy]] -- Content, blog, and GEO strategy for clicar.studio
 - [[project_llm_context_repo]] -- This repo: persistent context across LLMs
 - [[project_stackoverflow_analysis]] -- BigQuery analysis of Stack Overflow data
 
