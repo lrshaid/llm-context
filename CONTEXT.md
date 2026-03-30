@@ -382,8 +382,8 @@ Also connected to BigQuery CLI (`bq` via gcloud, authenticated as lautarorshaid@
 
 | Day | Platform  | Format              | Topic                                                        |
 |-----|-----------|---------------------|--------------------------------------------------------------|
-| Mon | LinkedIn  | Long post (insight) | How I use LLMs in my daily analytics workflow                |
-| Wed | X         | Thread (3-5 tweets) | 5 things LLMs are actually good at in data engineering       |
+| Mon | X         | Thread (3-5 tweets) | 5 things LLMs are actually good at in data engineering       |
+| Wed | LinkedIn  | Post                | LLM-powered custom viz replacing dashboards (skills as guardrails) |
 | Fri | X         | Hot take            | "Most AI-for-data tools solve problems nobody has"           |
 
 ### Week 2 -- "From BI to AI"
@@ -476,6 +476,19 @@ Here's a simple framework:
 If you can't answer those three questions, you don't have a data project. You have a science experiment.
 
 Nothing wrong with experiments. Just don't sell them as projects.
+
+
+## LinkedIn Post -- Pillar: AI for the Data Practitioner (Week 1 Wed)
+
+Dashboards are reports pretending to be tools. You build 50 of them, and people still ask "can you pull this for me?"
+
+I'm building something different for ecomm: you ask a question, the LLM writes the query, runs it against your warehouse, and generates the exact visualization you need. No pre-built charts. No "self-serve" that nobody actually serves themselves.
+
+The trick is skills — scoped instructions that tell the model which tables to hit, what the metrics mean, and what it's not allowed to touch. Guardrails, not vibes.
+
+The result: every answer is a custom report built on the fly. No dashboard maintenance. No stale filters. No "we need a new tab for that."
+
+Dashboards had their run. The next layer is data tools that think with you.
 
 \n---\n
 
@@ -656,4 +669,4 @@ On the event tracking side, I've used Segment to manage event collection and rou
 - **Marketing Skills by Corey Haines** — https://skills.sh/coreyhaines31/marketingskills
 \n---\n
 \n## Code Examples\n
-\n_Last synced: 2026-03-28 15:17_
+\n_Last synced: 2026-03-29 23:17_
