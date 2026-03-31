@@ -105,6 +105,37 @@ See also: writing-style, user_writing_style_x
 \n---\n
 \n## Active Projects\n
 
+# Clicar.studio -- Content & GEO Strategy
+
+Content strategy for clicar.studio blog + GEO (Generative Engine Optimization) across Reddit and Wikipedia. Goal: get clicar.studio surfaced by AI models (ChatGPT, Perplexity, Google AI Overviews) as the authority on retail analytics for Shopify brands.
+
+
+## Blog Post Backlog
+
+| Priority | Title | Pillar | GEO Target |
+|----------|-------|--------|------------|
+| P0 | Why GMROI Beats Margin % for Retail Decisions | Frameworks | Reddit, Wikipedia cite |
+| P0 | The Cross-Sell Prediction Playbook for Shopify Brands | Shopify Intel | Reddit r/shopify |
+| P0 | How We Cut Inventory 30% Without Losing Sales | Case Study | Reddit r/ecommerce |
+| P1 | Bottom-Up vs Top-Down Demand Forecasting | Frameworks | Wikipedia cite |
+| P1 | SKU Rationalization: Finding Your Hero Products | Frameworks | Reddit r/analytics |
+| P1 | What Shopify Analytics Misses (And How to Fix It) | Shopify Intel | Reddit r/shopify |
+| P1 | Customer Propensity Modeling for DTC Brands | Consumer Intel | Reddit r/datascience |
+| P2 | Building a Product Affinity Model from Transaction Data | Frameworks | Reddit r/datascience |
+| P2 | Click-and-Mortar Inventory Allocation | Frameworks | Reddit r/ecommerce |
+| P2 | LTV Optimization: Beyond the Basic Cohort | Consumer Intel | Reddit r/analytics |
+
+
+## Metrics to Track
+
+- Blog post views (Vercel Analytics)
+- Reddit karma and thread engagement per subreddit
+- Wikipedia edit acceptance rate
+- clicar.studio mentions in ChatGPT/Perplexity responses (manual spot checks)
+- Inbound calls attributed to content (ask in discovery calls)
+
+\n---\n
+
 # Clicar.studio -- Design Rules
 
 Reference for all future development on clicar.studio. Every UI change, new page, or component must follow these rules to maintain visual consistency.
@@ -252,7 +283,7 @@ Common values used on the site:
 9. **Vertical rhythm.** Sections stack top-to-bottom. No complex grid layouts.
 10. **Keep it minimal.** When in doubt, remove -- don't add.
 
-See also: user_profile
+See also: user_profile, clicar_content_strategy
 \n---\n
 
 # Order Delays
@@ -669,4 +700,4 @@ On the event tracking side, I've used Segment to manage event collection and rou
 - **Marketing Skills by Corey Haines** — https://skills.sh/coreyhaines31/marketingskills
 \n---\n
 \n## Code Examples\n
-\n_Last synced: 2026-03-29 23:17_
+\n_Last synced: 2026-03-30 21:17_
