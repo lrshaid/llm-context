@@ -40,6 +40,20 @@ Full style guide also saved at ~/llm-context/ideas/writing-style-x.md
 \n---\n
 \n## Rules & Feedback\n
 
+Lead clicar.studio messaging with what DTC brands actually feel first:
+
+1. **Customer intelligence** — who's buying, behavior, retention, propensity
+2. **Marketing performance** — channel ROI, spend efficiency, acquisition
+3. **Revenue analytics** — where money is made and lost, beyond top-line
+4. **Demand forecasting** — predicting what sells, when, and where
+
+Operations/inventory is real but secondary — don't lead with it. These brands spend most of their energy (and budget) on marketing to acquire customers. Ops pain comes later.
+
+**Why:** Lautaro's target DTC clients feel marketing + customer acquisition pain first. Inventory/ops is important but not the hook.
+
+**How to apply:** Any clicar.studio copy, blog posts, landing page, or pitch deck should lead with customer intel + marketing + revenue + demand forecasting. Inventory can appear but never as the primary value prop.
+\n---\n
+
 When Lautaro says to finish/end the session, always commit and push any pending changes in ~/llm-context/ to GitHub before wrapping up.
 \n---\n
 
@@ -286,6 +300,17 @@ Common values used on the site:
 See also: user_profile, clicar_content_strategy
 \n---\n
 
+## Idea
+
+Safari extension that prueba códigos de descuento de 7 dígitos numéricos (formato Sodimac Argentina) por fuerza bruta hasta encontrar uno válido.
+
+**Approach:** Montar un servidor local mock que simule el endpoint de validación de cupones, y la extensión prueba contra ese mock. No contra el sitio real.
+
+**Context:** Los cupones de Sodimac Argentina son 7 dígitos numéricos (ej: 9133534, 9070958), asignados por DNI vía sodimac.marketec.com.ar.
+
+**Status:** Pendiente — Lautaro lo va a ejecutar en otro momento.
+\n---\n
+
 # Order Delays
 
 **Goal:** Automate how Ops communicates package delays to CX so they can proactively notify customers.
@@ -366,6 +391,62 @@ I've been building Clicar.studio, a data + AI startup to bridge the gap between 
 
 **What are you excited about doing with Claude?**
 I've been working with DTC + data (SQL + Python) for years, AI, and Claude's latest versions in particular, allowed me to build complex and scalable apps out of reach. Now I can ship what I used to need a dev team for.
+\n---\n
+
+# Clicar Blog — SEO/GEO Content Plan
+
+6 articles live on the landing page as previews. All link to /blog for now — full posts need to be written.
+
+## Article Backlog (priority order)
+
+| # | Title | Pillar | Target Keywords | GEO Target |
+|---|-------|--------|----------------|------------|
+| 1 | Customer Propensity Modeling for DTC Brands | Customer Intelligence | "customer propensity model dtc", "predict repeat purchase" | Reddit r/datascience, r/ecommerce |
+| 2 | The Cross-Sell Prediction Playbook for DTC | Marketing | "cross-sell prediction ecommerce", "increase ROAS dtc" | Reddit r/shopify, r/ecommerce |
+| 3 | Why GMROI Beats Margin % for Retail Decisions | Revenue | "GMROI vs margin", "gross margin return on investment" | Wikipedia cite, Reddit r/analytics |
+| 4 | LTV Optimization: Beyond the Basic Cohort | Customer Intelligence | "ltv model dtc", "customer lifetime value segments" | Reddit r/analytics, r/datascience |
+| 5 | SKU Rationalization: Finding Your Hero Products | Assortment | "sku rationalization", "product assortment optimization" | Reddit r/ecommerce |
+| 6 | Why AI Answers Are Only as Good as Your Data Stack | AI + Data | "ai analytics wrong answers", "ai data quality" | Reddit r/datascience, r/analytics |
+
+## Daily GEO Routine
+
+**Monday — Write**
+- Pick the next article from the backlog
+- Write a full blog post (800-1200 words)
+- Structure for AI citation: definition at top, concrete numbers/formulas, comparison tables, step-by-step methodology, FAQ section
+- Publish to clicar.studio/blog
+
+**Tuesday — Reddit Seed**
+- Find 2-3 relevant threads in target subreddits (r/ecommerce, r/shopify, r/analytics, r/datascience)
+- Drop value-first comments that relate to the article topic — no links yet, just insight
+- Save thread URLs for follow-up
+
+**Wednesday — Reddit Post**
+- Post a condensed version of the article as a Reddit original post in the most relevant subreddit
+- Include key framework/numbers, link to full article at the end
+- Respond to every comment within 24h
+
+**Thursday — Cross-post & Distribute**
+- LinkedIn post (adapted from article, personal angle)
+- X thread (3-5 tweets, punchy, framework-first)
+- Reply to Monday's Reddit comments with deeper insight
+
+**Friday — Wikipedia & GEO Maintenance**
+- Edit relevant Wikipedia articles (GMROI, customer lifetime value, assortment planning, retail analytics)
+- Build edit history — 20-30 quality edits before citing clicar.studio
+- Check ChatGPT/Perplexity for clicar.studio mentions (manual spot checks)
+
+## Content Rules for GEO
+- Clear definitions at the top of every post (AI models extract these)
+- Include concrete numbers and formulas (citeable)
+- Add comparison tables (AI loves structured data)
+- FAQ section at bottom (matches question-format queries)
+- Enterprise-professional tone, not casual blog voice
+
+## Status
+- Landing page blog section: LIVE (2026-04-03)
+- Full articles: NOT YET WRITTEN — all cards link to /blog placeholder
+- Reddit/Wikipedia: NOT STARTED
 \n---\n
 
 # LLM Context Repo
@@ -580,6 +661,189 @@ When helping Lautaro write messages (community posts, DMs, LinkedIn, Slack, etc.
 See also: feedback_writing_confidence, user_writing_style_x, writing-style-x
 \n---\n
 \n## References\n
+# English-Spanish Glossary
+
+Vocabulario inglés con traducciones al español — recopilado para referencia rápida.
+
+| Word / Phrase | Meaning (ES) |
+|---|---|
+| Gaslighting | Manipulación psicológica para hacer dudar a alguien de su realidad |
+| Naughty | Travieso / pícaro |
+| Nasty | Desagradable / sucio / mala onda |
+| Clot | Coágulo |
+| Squirmy | Inquieto / retorciéndose |
+| Stir (the bowl) | Revolver / mezclar |
+| Stir the pot | Generar conflicto / agitar |
+| Allure | Atractivo / encanto |
+| Pouring | Vertiendo / derramando |
+| A heck | Un montón / bastante (ej: "a heck of a lot") |
+| Fudge | Dulce de chocolate blando / suavizar algo / falsear datos |
+| Grudge | Rencor |
+| Swans | Cisnes |
+| Tool of the trade | Herramienta del oficio |
+| Chop it up | Charlar / cortar en pedazos |
+| Endearing | Encantador / entrañable |
+| Chop down to size | Bajarle el ego a alguien |
+| Chafing | Irritación por roce |
+| Rashly | Impulsivamente / precipitadamente |
+| Oblivious | Desprevenido / ajeno / que no se da cuenta |
+| Pounded | Golpeado / machacado |
+| Bail out | Salir del problema / rescatar / irse |
+| Beefing | Peleando / discutiendo |
+| Sued | Demandado (legalmente) |
+| Peck | Picotear / beso corto |
+| Nagging | Molesto / insistente / que no para de joder |
+| Sips | Sorbos |
+| Spits | Escupidas |
+| Schmooze | Halagar interesadamente / chupar medias |
+| Snarling | Gruñendo agresivamente / mostrando los dientes |
+| Broom | Escoba |
+| Fullness of time | Con el tiempo / en el momento adecuado / a su debido tiempo |
+| Tip-toe | Caminar en puntas de pie |
+| Gagged | Amordazado / silenciado |
+| Stiff | Rígido / tieso / cadáver (slang) |
+| Stallion | Semental / caballo entero |
+| Spill it out | Decir todo / largarlo |
+| Spit it out | Decilo ya / largá de una |
+| Spill the beans | Revelar un secreto |
+| Whoops | Ups / ¡uy! |
+| Sweep up | Limpiar / barrer |
+| Stingy | Tacaño / rata |
+| Hustle | Esfuerzo intenso / rebusque / apuro |
+| Onward and upward | Seguir avanzando / para adelante y arriba |
+| Upbringing | Crianza |
+| College dropout | Persona que abandonó la universidad |
+| Diary | Diario / agenda |
+| Fall himself | Caerse solo |
+| Trip over himself | Tropezarse consigo mismo |
+| Saddle up | Prepararse / ponerse en marcha |
+| Soothe | Calmar / aliviar |
+| Rickety | Destartalado / tambaleante |
+| Tally it up | Sumar / hacer la cuenta |
+| Something to crow about | Algo de lo que presumir / para alardear |
+| Gang up on me | Ir todos contra mí |
+| Quirks | Rarezas / particularidades |
+| Commissioner | Comisionado |
+| Wander | Deambular / vagar |
+| Cattleman | Ganadero |
+| Steers | Novillos (ganado castrado) |
+| Greed | Codicia / avaricia |
+| Wise up | Avivarse / ponerse las pilas |
+| Despise | Despreciar |
+| Stew | Guiso / preocuparse / comerse la cabeza |
+| Stew on it | Darle vueltas / rumiar |
+| Shattered | Destrozado / hecho pedazos |
+| Stench | Hediondez / hedor |
+| Lumps | Bultos / grumos |
+| Lawn | Césped |
+| Crave | Desear intensamente / antojarse |
+| Gorging | Atiborrarse / darse un atracón |
+| Loftier | Más elevado / más ambicioso |
+| Bail hearing | Audiencia de fianza |
+| Calving and branding | Parición y marcación (ganadería) |
+| Deed | Escritura (legal) / acto / hazaña |
+| Crack at it | Intentarlo / darle una chance |
+| Whittling away | Reducir gradualmente / ir tallando de a poco |
+| Pittance | Miseria / monedas |
+| Have its way | Salirse con la suya |
+| Carve | Tallar / cortar / trinchar |
+| Muddle | Confusión / lío / embrollo |
+| Scatter off | Dispersarse / salir disparados |
+| Flock | Rebaño / bandada / manada |
+| Strike while the iron is hot | Aprovechar el momento / al hierro caliente batir de repente |
+| Shoveling | Palear / meter a paladas |
+| Didn't stick | No funcionó / no pegó |
+| Cramp up | Acalambrarse |
+| Going Dutch | Pagar mitad y mitad / cada uno paga lo suyo |
+| Shred | Triturar / destrozar |
+| Greedy | Codicioso / avaricioso |
+| Ripple | Ondulación / efecto dominó |
+| Buildup | Acumulación / crecimiento gradual |
+| Girth | Circunferencia / contorno |
+| Seething | Hirviendo de ira / furioso por dentro |
+| Booger sugar | Cocaína (slang) |
+| Obscured | Oculto / tapado / oscurecido |
+| Bowl cut | Corte taza |
+| Out of the clear blue | De la nada / de repente |
+| Stewing | Preocupándose / comiéndose la cabeza |
+| Cucked | Humillado / cornudo (slang) |
+| Whilst | Mientras (más formal/británico que "while") |
+| Mend | Reparar / arreglar / sanar |
+| Shoving off | Irse / rajarse |
+| Knock it off | Cortarla / pará |
+| Goatee | Perilla / candado (barba) |
+| Underbelly | Lado oscuro / punto vulnerable / bajo vientre |
+| Tally | Conteo / cuenta |
+| Stall | Estancarse / frenar / puesto (de feria) |
+| Take aback | Sorprender / dejar descolocado |
+| Pleasantries | Formalidades / cortesías |
+| Strewn | Esparcido / desparramado |
+| Hands down | Sin duda / de lejos |
+| Stab | Apuñalar / intento (give it a stab = intentarlo) |
+| Greed is good | La codicia es buena (frase de Wall Street) |
+| Lockstep | Sincronizado / al unísono |
+| Ragged | Desgastado / hecho bolsa |
+| Run ragged | Agotar / hacer mierda de cansancio |
+| Stumbling | Tropezando / tambaleando |
+| Snuggle | Acurrucarse |
+| Carving | Tallando / trinchando |
+| Shuck | Pelar (maíz, ostras) / descascarar |
+| Shack | Choza / rancho |
+| Keen | Entusiasta / interesado / afilado |
+| Flinch | Reaccionar / echarse para atrás / estremecerse |
+| Thud | Golpe seco / ruido sordo |
+| Racket | Ruido fuerte / estafa / raqueta |
+| Stroll | Pasear / caminar tranquilo |
+| Bargain | Oferta / ganga / negociar |
+| Contrite | Arrepentido / compungido |
+| Grabby | Manoseador / que agarra todo |
+| Rubble | Escombros |
+| Exertion | Esfuerzo (físico) |
+| Singed | Chamuscado / quemado superficialmente |
+| Vengeful | Vengativo |
+| Vouch | Dar fe / responder por alguien |
+| Tossed | Tirado / arrojado |
+| Intertwined | Entrelazado |
+| Gouge | Hacer un surco / arrancar / estafar (precios) |
+| Slit | Corte fino / ranura / rendija |
+| Engulf | Engullir / envolver / tragarse |
+| Swore | Juró / puteó (pasado de swear) |
+| Splinter | Astilla |
+| Whimper | Gimoteo / quejido |
+| Weaving | Entretejer / zigzaguear |
+| Rustle | Susurro / crujido de hojas / robar ganado |
+| Levered | Hacer palanca / apalancar |
+| Brewsters | Cerveceros / nombre propio |
+| Ascribed | Atribuido |
+| Pillaging | Saqueando |
+| Groovy | Con onda / copado |
+| Withstands | Resiste / aguanta |
+| Bottom feeder | Carroñero / oportunista de lo peor |
+| Clear the air | Aclarar las cosas / limpiar el ambiente |
+| Eloping | Fugarse para casarse |
+| Self-loathing | Autodesprecio / odio hacia uno mismo |
+| Full-on blaze | Intensidad total / llamas a pleno |
+| Dumpster | Contenedor de basura |
+| Evict | Desalojar / echar |
+| Bleak | Sombrío / desolador |
+| Berated | Reprendido / cagado a pedos |
+| Follow through | Cumplir / llevar a cabo hasta el final |
+| Utterly | Totalmente / completamente |
+| Ripple | Efecto en cadena / onda expansiva |
+| Wobbles | Tambalear / tambalearse |
+| Grunt | Gruñir / gruñido / laburo pesado (slang) |
+| Razzing | Burlarse / cargar a alguien |
+| Meager | Escaso / magro |
+| Shedding | Desprender / perder (pelo, piel, lágrimas) |
+| Helm | Dirigir / timón (at the helm = al mando) |
+| Strung up | Tenso / colgado / nervioso |
+| Grin | Sonrisa amplia |
+| Hunk | Tipo atractivo / pedazo grande |
+| Dooming | Condenando |
+| Hutch | Jaula / conejera / mueble tipo aparador |
+| Rung | Peldaño / escalón (de escalera) |
+| Watertight | Hermético / irrefutable / a prueba de agua |
+\n---\n
 
 ## Tell us what shaped you (3 parts + one-line goal)
 
@@ -709,4 +973,4 @@ On the event tracking side, I've used Segment to manage event collection and rou
 - **Marketing Skills by Corey Haines** — https://skills.sh/coreyhaines31/marketingskills
 \n---\n
 \n## Code Examples\n
-\n_Last synced: 2026-04-03 00:17_
+\n_Last synced: 2026-04-05 22:17_
