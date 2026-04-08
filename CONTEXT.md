@@ -5,7 +5,9 @@ This file aggregates all context needed to work with Lautaro.
 Paste it as a system prompt in any LLM to get full context.
 
 ---
-\n## Who I am\n
+
+## Who I am
+
 
 Current data development workflow at Mejuri:
 
@@ -15,7 +17,9 @@ Current data development workflow at Mejuri:
 - **LLM context**: Persistent context repo (~/llm-context) synced across tools
 
 Using AI to augment the full data development cycle — writing/reviewing SQL and dbt models in VS Code with Claude, then surfacing insights through Omni with AI context augmentation.
-\n---\n
+
+---
+
 
 - Location: Buenos Aires, Argentina
 - Role: Analytics Engineer at Mejuri (retail startup)
@@ -28,7 +32,9 @@ Using AI to augment the full data development cycle — writing/reviewing SQL an
 - Communication style: concise and direct, no filler
 - Expects things said once to stick via memory
 - Systems thinker: wants context and tooling portable across tools and LLMs
-\n---\n
+
+---
+
 
 Concise, insightful, bilingual. 1-4 sentences max. English for global/tech, Spanish for LatAm/Argentina.
 
@@ -37,8 +43,12 @@ Optimistic about tech but grounded. Analytical edge from data/consulting backgro
 Avoids: overpolished LLM language, long structured posts, buzzwords, emoji-as-structure, motivational fluff.
 
 Full style guide also saved at ~/llm-context/ideas/writing-style-x.md
-\n---\n
-\n## Rules & Feedback\n
+
+---
+
+
+## Rules & Feedback
+
 
 Lead clicar.studio messaging with what DTC brands actually feel first:
 
@@ -52,16 +62,20 @@ Operations/inventory is real but secondary — don't lead with it. These brands 
 **Why:** Lautaro's target DTC clients feel marketing + customer acquisition pain first. Inventory/ops is important but not the hook.
 
 **How to apply:** Any clicar.studio copy, blog posts, landing page, or pitch deck should lead with customer intel + marketing + revenue + demand forecasting. Inventory can appear but never as the primary value prop.
-\n---\n
+
+---
+
 
 When Lautaro says to finish/end the session, always commit and push any pending changes in ~/llm-context/ to GitHub before wrapping up.
-\n---\n
+
+---
+
 
 # Pull Context Repo on Session Start
 
 At the start of every new conversation, before doing anything else:
-1. Run `cd /Users/lautaro.rshaid/llm-context && git pull origin main`
-2. Read `/Users/lautaro.rshaid/llm-context/CONTEXT.md`
+1. Run `cd /Users/lautarorshaid/llm-context && git pull origin main`
+2. Read `/Users/lautarorshaid/llm-context/CONTEXT.md`
 3. Use that context throughout the session
 
 > [!info] Why
@@ -70,10 +84,14 @@ At the start of every new conversation, before doing anything else:
 **How to apply:** Always. Do it silently -- no need to announce it unless the pull fails.
 
 See also: project_llm_context_repo, reference_llm_context_repo
-\n---\n
+
+---
+
 
 When the user says "finish" or ends a session, only commit and push ~/llm-context. Do not automatically commit or push changes in other repos (webapp, etc.) — only do that when explicitly asked.
-\n---\n
+
+---
+
 
 - **Columns**: trailing commas (comma at end of line)
 - **CTEs**: leading commas (comma before CTE name on same line)
@@ -100,10 +118,14 @@ select
 from first_cte a
 left join second_cte b on a.id = b.id
 ```
-\n---\n
+
+---
+
 
 When saving or updating any memory file, always include a `created` field in the frontmatter (date of first save) and an `updated` field when modifying an existing memory. Format: YYYY-MM-DD.
-\n---\n
+
+---
+
 
 # Write with Confidence
 
@@ -116,8 +138,12 @@ No hedging, no qualifiers, no softeners. Direct and assertive.
 **How to apply:** Any message draft -- community posts, DMs, LinkedIn, Slack, emails. Check for weak language and rewrite.
 
 See also: writing-style, user_writing_style_x
-\n---\n
-\n## Active Projects\n
+
+---
+
+
+## Active Projects
+
 
 # Clicar.studio -- Content & GEO Strategy
 
@@ -148,7 +174,9 @@ Content strategy for clicar.studio blog + GEO (Generative Engine Optimization) a
 - clicar.studio mentions in ChatGPT/Perplexity responses (manual spot checks)
 - Inbound calls attributed to content (ask in discovery calls)
 
-\n---\n
+
+---
+
 
 # Clicar.studio -- Design Rules
 
@@ -298,7 +326,9 @@ Common values used on the site:
 10. **Keep it minimal.** When in doubt, remove -- don't add.
 
 See also: user_profile, clicar_content_strategy
-\n---\n
+
+---
+
 
 ## Idea
 
@@ -309,7 +339,9 @@ Safari extension that prueba códigos de descuento de 7 dígitos numéricos (for
 **Context:** Los cupones de Sodimac Argentina son 7 dígitos numéricos (ej: 9133534, 9070958), asignados por DNI vía sodimac.marketec.com.ar.
 
 **Status:** Pendiente — Lautaro lo va a ejecutar en otro momento.
-\n---\n
+
+---
+
 
 # Order Delays
 
@@ -338,7 +370,9 @@ Safari extension that prueba códigos de descuento de 7 dígitos numéricos (for
 - **2026-03-17** -- Project documented. Need to follow up on missed meeting with Kristy/Jenn.
 
 See also: mejuri-otif, mejuri-retail
-\n---\n
+
+---
+
 
 # OTIF -- On Time In Full
 
@@ -358,7 +392,9 @@ Closely tied to mejuri-order-delays -- both deal with shipping date changes, dif
 - **2026-03-17** -- Project documented. Waiting on Wednesday meeting to define line item vs shipping level.
 
 See also: mejuri-order-delays, mejuri-retail
-\n---\n
+
+---
+
 
 # Retail Analytics
 
@@ -382,7 +418,9 @@ See also: mejuri-order-delays, mejuri-retail
 - **2026-03-17** -- Project documented. Last meeting covered clientelling (Patrik vs DK debate). Need to scope WBR automation and services dashboard revamp.
 
 See also: mejuri-order-delays, mejuri-otif, user_profile
-\n---\n
+
+---
+
 
 Anthropic x Kaszek hackathon application answers.
 
@@ -391,7 +429,9 @@ I've been building Clicar.studio, a data + AI startup to bridge the gap between 
 
 **What are you excited about doing with Claude?**
 I've been working with DTC + data (SQL + Python) for years, AI, and Claude's latest versions in particular, allowed me to build complex and scalable apps out of reach. Now I can ship what I used to need a dev team for.
-\n---\n
+
+---
+
 
 # Clicar Blog — SEO/GEO Content Plan
 
@@ -447,13 +487,15 @@ I've been working with DTC + data (SQL + Python) for years, AI, and Claude's lat
 - Landing page blog section: LIVE (2026-04-03)
 - Full articles: NOT YET WRITTEN — all cards link to /blog placeholder
 - Reddit/Wikipedia: NOT STARTED
-\n---\n
+
+---
+
 
 # LLM Context Repo
 
 A persistent context repo lives at https://github.com/lrshaid/llm-context (account: lrshaid).
 
-Local path: `/Users/lautaro.rshaid/llm-context/`
+Local path: `/Users/lautarorshaid/llm-context/`
 
 **Structure:**
 - `user/` -- profile, workflow, writing style
@@ -468,10 +510,12 @@ Local path: `/Users/lautaro.rshaid/llm-context/`
 > [!info] Why
 > User wants a single source of truth usable with multiple LLMs, not just Claude.
 
-**How to apply:** When the user shares a project detail, idea, rule, or code example, write/update the appropriate file inside `/Users/lautaro.rshaid/llm-context/` so it gets picked up on the next sync push.
+**How to apply:** When the user shares a project detail, idea, rule, or code example, write/update the appropriate file inside `/Users/lautarorshaid/llm-context/` so it gets picked up on the next sync push.
 
 See also: reference_llm_context_repo, feedback_context_sync, user_ai_workflow
-\n---\n
+
+---
+
 
 Built a set of BigQuery queries analyzing Stack Overflow data (bigquery-public-data.stackoverflow). Published to https://github.com/lrshaid/stackoverflow-bigquery-analysis
 
@@ -484,8 +528,12 @@ Three questions, four queries:
 Key finding from Q3: shorter title + shorter body = higher accepted rate. Author reputation showed poor correlation.
 
 Also connected to BigQuery CLI (`bq` via gcloud, authenticated as lautarorshaid@gmail.com, project: triple-acre-469215-p0).
-\n---\n
-\n## Ideas\n
+
+---
+
+
+## Ideas
+
 
 # Personal Brand Plan
 
@@ -531,7 +579,9 @@ Also connected to BigQuery CLI (`bq` via gcloud, authenticated as lautarorshaid@
 | Wed | LinkedIn  | Long post           | Behind the scenes of your personal site / llm-context repo   |
 | Fri | X         | Quick tip           | A tool, shortcut, or workflow worth sharing                  |
 
-\n---\n
+
+---
+
 
 # Sample Posts -- Personal Brand
 
@@ -611,7 +661,9 @@ The result: every answer is a custom report built on the fly. No dashboard maint
 
 Dashboards had their run. The next layer is data tools that think with you.
 
-\n---\n
+
+---
+
 
 # Writing Style -- X (@lautirshaid)
 
@@ -638,8 +690,12 @@ Professional, forward-thinking, approachable. Quick high-value insights from som
 - Emojis as structure
 
 See also: user_writing_style_x, writing-style, personal-brand-plan
-\n---\n
-\n## Rules for LLMs\n
+
+---
+
+
+## Rules for LLMs
+
 
 # Writing Style Rules
 
@@ -659,8 +715,12 @@ When helping Lautaro write messages (community posts, DMs, LinkedIn, Slack, etc.
 **How to apply:** Any time you draft or edit a message for him, check for weak/hesitant language and rewrite it to sound sure-footed. In Spanish, skip the opening question mark.
 
 See also: feedback_writing_confidence, user_writing_style_x, writing-style-x
-\n---\n
-\n## References\n
+
+---
+
+
+## References
+
 # English-Spanish Glossary
 
 Vocabulario inglés con traducciones al español — recopilado para referencia rápida.
@@ -843,7 +903,9 @@ Vocabulario inglés con traducciones al español — recopilado para referencia 
 | Hutch | Jaula / conejera / mueble tipo aparador |
 | Rung | Peldaño / escalón (de escalera) |
 | Watertight | Hermético / irrefutable / a prueba de agua |
-\n---\n
+
+---
+
 
 ## Tell us what shaped you (3 parts + one-line goal)
 
@@ -878,7 +940,9 @@ I've worked with funnel data mainly in e-commerce — tracking sessions through 
 
 On the event tracking side, I've used Segment to manage event collection and route data to downstream tools and warehouses — having clean, consistent events is what makes funnel analysis reliable.
 
-\n---\n
+
+---
+
 
 ## Article 1: "Lessons from Building Claude Code: How We Use Skills" — Thariq (@trq212, Anthropic)
 **Date:** 2026-03-17
@@ -906,15 +970,29 @@ On the event tracking side, I've used Segment to manage event collection and rou
 - **On-demand hooks** in skills for opinionated behavior (e.g., `/careful` blocks destructive commands)
 - Distribution: check into repo (`.claude/skills`) or plugin marketplace for scale
 
-\n---\n
+
+---
+
+
+Created: 2026-04-06
+Updated: 2026-04-06
+
+Repos to pull from when working on frontend / UX / UI tasks. Check these for design patterns, component structure, and visual references before building from scratch.
+
+- **trycua/launchpad** — https://github.com/trycua/launchpad
+
+---
+
 
 - Repo: https://github.com/lrshaid/llm-context.git
 - Local path: ~/llm-context/
-- Structure: memory/, projects/, ideas/, rules/, code-examples/
+- Structure: user/, feedback/, projects/, ideas/, rules/, references/, code-examples/
 - Sync: sync.sh runs via crontab every 4h (17 */4 * * *)
 - Logs: /tmp/llm-context-sync.log
 - When user shares a project detail, idea, rule, or code example, write/update the appropriate file inside ~/llm-context/ so it gets picked up on next sync
-\n---\n
+
+---
+
 
 ## Accelerators
 
@@ -971,6 +1049,11 @@ On the event tracking side, I've used Segment to manage event collection and rou
 ## Marketing
 
 - **Marketing Skills by Corey Haines** — https://skills.sh/coreyhaines31/marketingskills
-\n---\n
-\n## Code Examples\n
-\n_Last synced: 2026-04-05 22:17_
+
+---
+
+
+## Code Examples
+
+
+_Last synced: 2026-04-07 10:21_

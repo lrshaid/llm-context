@@ -1,6 +1,6 @@
 ---
 created: 2026-03-12
-updated: 2026-03-12
+updated: 2026-04-07
 tags:
   - type/project
   - ai
@@ -13,7 +13,7 @@ aliases:
 
 A persistent context repo lives at https://github.com/lrshaid/llm-context (account: lrshaid).
 
-Local path: `/Users/lautaro.rshaid/llm-context/`
+Local path: `/Users/lautarorshaid/llm-context/`
 
 **Structure:**
 - `user/` -- profile, workflow, writing style
@@ -28,6 +28,6 @@ Local path: `/Users/lautaro.rshaid/llm-context/`
 > [!info] Why
 > User wants a single source of truth usable with multiple LLMs, not just Claude.
 
-**How to apply:** When the user shares a project detail, idea, rule, or code example, write/update the appropriate file inside `/Users/lautaro.rshaid/llm-context/` so it gets picked up on the next sync push.
+**How to apply:** When the user shares a project detail, idea, rule, or code example, write/update the appropriate file inside `/Users/lautarorshaid/llm-context/` so it gets picked up on the next sync push.
 
 See also: [[reference_llm_context_repo]], [[feedback_context_sync]], [[user_ai_workflow]]

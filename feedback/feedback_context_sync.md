@@ -1,6 +1,6 @@
 ---
 created: 2026-03-12
-updated: 2026-03-18
+updated: 2026-04-07
 tags:
   - type/feedback
   - workflow
@@ -9,8 +9,8 @@ tags:
 # Pull Context Repo on Session Start
 
 At the start of every new conversation, before doing anything else:
-1. Run `cd /Users/lautaro.rshaid/llm-context && git pull origin main`
-2. Read `/Users/lautaro.rshaid/llm-context/CONTEXT.md`
+1. Run `cd /Users/lautarorshaid/llm-context && git pull origin main`
+2. Read `/Users/lautarorshaid/llm-context/CONTEXT.md`
 3. Use that context throughout the session
 
 > [!info] Why

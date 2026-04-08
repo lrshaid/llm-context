@@ -2,6 +2,7 @@
 # Syncs Claude Code memory into typed folders and pushes to GitHub every 4 hours
 
 set -e
+setopt NULL_GLOB
 
 REPO_DIR="$HOME/llm-context"
 MEMORY_SRC=$(find "$HOME/.claude/projects" -maxdepth 2 -type d -name "memory" -path "*-Users-*" | head -1)
@@ -45,42 +46,50 @@ strip_for_context() {
   sed '/^---$/,/^---$/d' "$1" | sed 's/\[\[\([^]|]*\)|\([^]]*\)\]\]/\2/g; s/\[\[\([^]]*\)\]\]/\1/g'
 }
 
-echo "\n## Who I am\n" >> "$CONTEXT"
+append_section() {
+  printf '\n## %s\n\n' "$1" >> "$CONTEXT"
+}
+
+append_separator() {
+  printf '\n---\n\n' >> "$CONTEXT"
+}
+
+append_section "Who I am"
 for f in "$REPO_DIR"/user/*.md; do
-  [ -f "$f" ] && strip_for_context "$f" >> "$CONTEXT" && echo "\n---\n" >> "$CONTEXT"
+  [ -f "$f" ] && strip_for_context "$f" >> "$CONTEXT" && append_separator
 done
 
-echo "\n## Rules & Feedback\n" >> "$CONTEXT"
+append_section "Rules & Feedback"
 for f in "$REPO_DIR"/feedback/*.md; do
-  [ -f "$f" ] && strip_for_context "$f" >> "$CONTEXT" && echo "\n---\n" >> "$CONTEXT"
+  [ -f "$f" ] && strip_for_context "$f" >> "$CONTEXT" && append_separator
 done
 
-echo "\n## Active Projects\n" >> "$CONTEXT"
+append_section "Active Projects"
 for f in "$REPO_DIR"/projects/*.md; do
-  [ -f "$f" ] && strip_for_context "$f" >> "$CONTEXT" && echo "\n---\n" >> "$CONTEXT"
+  [ -f "$f" ] && strip_for_context "$f" >> "$CONTEXT" && append_separator
 done
 
-echo "\n## Ideas\n" >> "$CONTEXT"
+append_section "Ideas"
 for f in "$REPO_DIR"/ideas/*.md; do
-  [ -f "$f" ] && strip_for_context "$f" >> "$CONTEXT" && echo "\n---\n" >> "$CONTEXT"
+  [ -f "$f" ] && strip_for_context "$f" >> "$CONTEXT" && append_separator
 done
 
-echo "\n## Rules for LLMs\n" >> "$CONTEXT"
+append_section "Rules for LLMs"
 for f in "$REPO_DIR"/rules/*.md; do
-  [ -f "$f" ] && strip_for_context "$f" >> "$CONTEXT" && echo "\n---\n" >> "$CONTEXT"
+  [ -f "$f" ] && strip_for_context "$f" >> "$CONTEXT" && append_separator
 done
 
-echo "\n## References\n" >> "$CONTEXT"
+append_section "References"
 for f in "$REPO_DIR"/references/*.md; do
-  [ -f "$f" ] && strip_for_context "$f" >> "$CONTEXT" && echo "\n---\n" >> "$CONTEXT"
+  [ -f "$f" ] && strip_for_context "$f" >> "$CONTEXT" && append_separator
 done
 
-echo "\n## Code Examples\n" >> "$CONTEXT"
+append_section "Code Examples"
 for f in "$REPO_DIR"/code-examples/*.md; do
-  [ -f "$f" ] && strip_for_context "$f" >> "$CONTEXT" && echo "\n---\n" >> "$CONTEXT"
+  [ -f "$f" ] && strip_for_context "$f" >> "$CONTEXT" && append_separator
 done
 
-echo "\n_Last synced: $(date '+%Y-%m-%d %H:%M')_" >> "$CONTEXT"
+printf '\n_Last synced: %s_\n' "$(date '+%Y-%m-%d %H:%M')" >> "$CONTEXT"
 
 # --- 3. Commit and push ---
 cd "$REPO_DIR"
