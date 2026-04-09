@@ -697,6 +697,14 @@ See also: user_writing_style_x, writing-style, personal-brand-plan
 ## Rules for LLMs
 
 
+# SQL Validation Checklist
+
+Reusable checklist for validating SQL queries, dbt models, and scorecards. Derived from real validation sessions on Mejuri's retail scorecard and OTIF pipeline.
+
+
+---
+
+
 # Writing Style Rules
 
 When helping Lautaro write messages (community posts, DMs, LinkedIn, Slack, etc.), always write with confidence.
@@ -1056,4 +1064,4 @@ Repos to pull from when working on frontend / UX / UI tasks. Check these for des
 ## Code Examples
 
 
-_Last synced: 2026-04-07 10:21_
+_Last synced: 2026-04-09 18:18_

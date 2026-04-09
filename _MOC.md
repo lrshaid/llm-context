@@ -44,6 +44,7 @@ aliases:
 - [[feedback_context_sync]] -- Pull context repo on session start
 - [[feedback_commit_push_on_exit]] -- Commit and push on session end
 - [[feedback_finish_session]] -- Only push llm-context, not other repos
+- [[sql-validation-checklist]] -- SQL/dbt validation checklist: joins, grain, LY, window functions, multi-grain
 
 ## References
 
