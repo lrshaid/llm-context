@@ -8,6 +8,7 @@ updated: 2026-04-16
 ## 2026-04-17 (Thursday)
 
 - [ ] Verificación policial del auto (RAV4)
+- [ ] Hablarle a Santiago de Turbodata
 
 ## 2026-04-16 (Wednesday)
 
