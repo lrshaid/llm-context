@@ -1,19 +1,23 @@
 ---
 created: 2026-04-13
-updated: 2026-04-15
+updated: 2026-04-16
 ---
 
 # To-Dos
 
-## 2026-04-14 (Monday)
+## 2026-04-16 (Wednesday)
 
-- [ ] 8:00 AM ART — Surf classes
-- [ ] 5:00 PM ART — Meeting with the accountant
-- [ ] Hablarle a Walter por lo de la pileta
+- [ ] Resolver verificación policial de la RAV4
 
-## 2026-04-15 (Tuesday)
+## Completed
 
-- [ ] Resolver certificado contable
-- [ ] Terminar el dashboard data for everyday retail en mejuri
-- [ ] Revisar modelos de marketing de mejuri
-- [ ] Revisar como sacar turno para verificacion policial (esto antes del mediodia)
+### 2026-04-14 (Monday)
+- [x] 8:00 AM ART — Surf classes
+- [x] 5:00 PM ART — Meeting with the accountant
+- [x] Hablarle a Walter por lo de la pileta
+
+### 2026-04-15 (Tuesday)
+- [x] Resolver certificado contable
+- [x] Terminar el dashboard data for everyday retail en mejuri
+- [x] Revisar modelos de marketing de mejuri
+- [x] Revisar como sacar turno para verificacion policial
