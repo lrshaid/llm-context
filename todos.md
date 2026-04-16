@@ -5,6 +5,10 @@ updated: 2026-04-16
 
 # To-Dos
 
+## 2026-04-17 (Thursday)
+
+- [ ] Verificación policial del auto (RAV4)
+
 ## 2026-04-16 (Wednesday)
 
 - [ ] Resolver verificación policial de la RAV4
