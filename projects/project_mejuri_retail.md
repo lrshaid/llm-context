@@ -8,6 +8,7 @@ tags:
   - analytics
 aliases:
   - retail analytics
+  - mejuri-retail
 ---
 
 # Retail Analytics

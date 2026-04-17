@@ -2,7 +2,9 @@
 name: Anthropic x Kaszek Hackathon
 description: Hackathon application answers — polished responses for Anthropic + Kaszek hackathon
 type: project
+status: completed
 created: 2026-04-02
+updated: 2026-04-17
 ---
 
 Anthropic x Kaszek hackathon application answers.

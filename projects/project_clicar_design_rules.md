@@ -8,6 +8,7 @@ tags:
   - shopify
 aliases:
   - clicar design
+  - clicar_design_rules
 ---
 
 # Clicar.studio -- Design Rules

@@ -8,6 +8,7 @@ tags:
   - pipeline
 aliases:
   - otif
+  - mejuri-otif
 ---
 
 # OTIF -- On Time In Full

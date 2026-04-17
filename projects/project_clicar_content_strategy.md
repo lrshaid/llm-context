@@ -10,6 +10,7 @@ tags:
 aliases:
   - clicar content
   - clicar GEO
+  - clicar_content_strategy
 ---
 
 # Clicar.studio -- Content & GEO Strategy

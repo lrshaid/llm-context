@@ -8,6 +8,7 @@ tags:
   - pipeline
 aliases:
   - order delays
+  - mejuri-order-delays
 ---
 
 # Order Delays
