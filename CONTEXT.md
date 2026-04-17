@@ -878,7 +878,6 @@ Repos to pull from when working on frontend / UX / UI tasks. Check these for des
 ## Marketing
 
 - **Marketing Skills by Corey Haines** — https://skills.sh/coreyhaines31/marketingskills
-<<<<<<< Updated upstream
 
 ---
 
@@ -887,8 +886,3 @@ Repos to pull from when working on frontend / UX / UI tasks. Check these for des
 
 
 _Last synced: 2026-04-13 10:17_
-=======
-\n---\n
-\n## Code Examples\n
-\n_Last synced: 2026-04-02 08:17_
->>>>>>> Stashed changes
