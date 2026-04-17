@@ -803,6 +803,14 @@ On the event tracking side, I've used Segment to manage event collection and rou
 ---
 
 
+## Articles & Resources
+
+- **Building Kepler: Astronomer's Internal Data Assistant** — https://www.astronomer.io/blog/building-kepler-astronomer-internal-data-assistant/
+  Topics: internal data assistant, LLM + hybrid search, context layer over semantic layer, discovery subagent, playbooks, lineage-as-trust, Slackbot for self-serve analytics. Built on DuckDB index + Jupyter kernel, rebuilding on Claude Code SDK.
+
+---
+
+
 Created: 2026-04-06
 Updated: 2026-04-06
 
@@ -885,4 +893,4 @@ Repos to pull from when working on frontend / UX / UI tasks. Check these for des
 ## Code Examples
 
 
-_Last synced: 2026-04-13 10:17_
+_Last synced: 2026-04-16 11:17_
